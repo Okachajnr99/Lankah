@@ -3,161 +3,162 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DERTS.SOUND.SOLUTIONS | Quality Sound & Event Production</title>
+    <title>Lankah Home Furniture - Premium Furniture & Home Decor</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Orbitron:wght@600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary: #0a0e17;
-            --secondary: #ff3e00;
-            --accent: #00a8ff;
-            --light: #f5f5f5;
-            --dark: #121212;
-            --text: #e0e0e0;
-            --shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            --primary: #8B7355;      /* Warm brown - wood tones */
+            --secondary: #D4AF37;    /* Gold - luxury accent */
+            --accent: #A52A2A;       /* Rich red-brown */
+            --light: #F5F5F5;        /* Light background */
+            --dark: #333333;         /* Dark text */
             --transition: all 0.3s ease;
-            --neon-glow: 0 0 10px var(--accent), 0 0 20px var(--accent);
         }
         
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
         
         body {
-            font-family: 'Montserrat', sans-serif;
-            color: var(--text);
             line-height: 1.6;
+            color: var(--dark);
+            background-color: var(--light);
             overflow-x: hidden;
-            background-color: var(--dark);
-            background-image: 
-                radial-gradient(circle at 10% 20%, rgba(255, 62, 0, 0.1) 0%, transparent 20%),
-                radial-gradient(circle at 90% 80%, rgba(0, 168, 255, 0.1) 0%, transparent 20%);
         }
         
-        h1, h2, h3, h4 {
-            font-family: 'Orbitron', sans-serif;
-            font-weight: 700;
-            margin-bottom: 1rem;
-            letter-spacing: 1px;
-        }
-        
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        
-        /* Header & Navigation */
-        header {
-            background-color: rgba(10, 14, 23, 0.95);
+        /* Header */
+        .header {
             position: fixed;
             width: 100%;
-            top: 0;
+            background: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             z-index: 1000;
-            box-shadow: var(--shadow);
-            padding: 1rem 0;
-            border-bottom: 1px solid rgba(255, 62, 0, 0.3);
+            padding: 0.8rem 0;
         }
         
-        .header-content {
+        .nav-container {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
         }
         
         .logo {
             display: flex;
             align-items: center;
+            font-weight: bold;
+            font-size: 1.2rem;
+            color: var(--primary);
         }
         
-        .logo h1 {
-            font-size: 1.5rem;
-            margin: 0;
-            color: var(--light);
-            text-transform: uppercase;
-            letter-spacing: 2px;
+        .logo img {
+            height: 50px;
+            margin-right: 10px;
         }
         
-        .logo span {
-            color: var(--secondary);
+        .logo-text {
+            display: flex;
+            flex-direction: column;
         }
         
-        .tagline {
+        .company-name {
+            font-weight: 700;
+            font-size: 1.3rem;
+            line-height: 1.2;
+        }
+        
+        .company-tagline {
             font-size: 0.8rem;
-            margin-left: 1rem;
-            padding-left: 1rem;
-            border-left: 1px solid rgba(255, 255, 255, 0.2);
+            font-weight: 400;
             color: var(--accent);
         }
         
-        nav ul {
+        .nav-menu {
             display: flex;
             list-style: none;
+            gap: 1.5rem;
         }
         
-        nav ul li {
-            margin-left: 2rem;
-        }
-        
-        nav ul li a {
+        .nav-menu li a {
             text-decoration: none;
-            color: var(--light);
-            font-weight: 600;
+            color: var(--dark);
+            font-weight: 500;
             transition: var(--transition);
+            padding: 5px 0;
             position: relative;
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
         }
         
-        nav ul li a:after {
+        .nav-menu li a:after {
             content: '';
             position: absolute;
             width: 0;
             height: 2px;
-            bottom: -5px;
+            bottom: 0;
             left: 0;
             background-color: var(--secondary);
             transition: var(--transition);
         }
         
-        nav ul li a:hover:after {
+        .nav-menu li a:hover:after {
             width: 100%;
         }
         
-        nav ul li a:hover {
-            color: var(--secondary);
+        .nav-menu li a:hover {
+            color: var(--primary);
         }
         
-        .menu-toggle {
-            display: none;
-            font-size: 1.5rem;
+        .contact-btn {
+            background: var(--primary);
+            color: white;
+            padding: 0.7rem 1.5rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+            border: none;
             cursor: pointer;
-            color: var(--light);
         }
         
-        /* Hero Section with Video Background */
+        .contact-btn:hover {
+            background: var(--accent);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(139, 115, 85, 0.3);
+        }
+        
+        /* Mobile Menu */
+        .mobile-menu {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+        
+        .mobile-menu span {
+            height: 3px;
+            width: 25px;
+            background: var(--primary);
+            margin-bottom: 4px;
+            border-radius: 3px;
+            transition: var(--transition);
+        }
+        
+        /* Hero Section with Image Background */
         .hero {
+            position: relative;
             height: 100vh;
             display: flex;
             align-items: center;
-            text-align: center;
+            justify-content: center;
             color: white;
-            padding-top: 80px;
-            position: relative;
+            text-align: center;
             overflow: hidden;
-        }
-        
-        .video-background {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            z-index: -1;
+            padding: 0 20px;
+            background: url('https://res.cloudinary.com/dnxtuowlp/image/upload/v1759467900/Sofa1_clba94.jpg') no-repeat center center;
+            background-size: cover;
         }
         
         .hero-overlay {
@@ -166,1168 +167,1629 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.7);
-            z-index: -1;
+            background: linear-gradient(to bottom, rgba(139, 115, 85, 0.8), rgba(139, 115, 85, 0.6));
         }
         
         .hero-content {
             max-width: 800px;
-            margin: 0 auto;
-            padding: 2rem;
-            position: relative;
-            z-index: 2;
+            z-index: 10;
         }
         
-        .hero h2 {
+        .hero h1 {
             font-size: 3.5rem;
-            margin-bottom: 1.5rem;
-            line-height: 1.2;
-            text-transform: uppercase;
-            text-shadow: var(--neon-glow);
+            margin-bottom: 1rem;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
         }
         
         .hero p {
             font-size: 1.2rem;
-            margin-bottom: 2rem;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
+            margin-bottom: 1.5rem;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
         }
         
-        /* Enhanced Button Styles */
-        .btn {
-            display: inline-block;
-            background: var(--secondary);
-            color: white;
-            padding: 0.8rem 2rem;
-            border: none;
-            border-radius: 4px;
-            font-size: 1rem;
-            font-weight: 600;
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        
+        .cta-btn {
+            padding: 0.9rem 2rem;
+            border-radius: 30px;
             text-decoration: none;
-            cursor: pointer;
-            transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
-            box-shadow: var(--shadow);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            position: relative;
-            overflow: hidden;
-            z-index: 1;
+            font-weight: 600;
+            transition: var(--transition);
+            display: inline-block;
         }
         
-        .btn:before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 0%;
-            height: 100%;
-            background: rgba(255, 255, 255, 0.1);
-            transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
-            z-index: -1;
+        .cta-primary {
+            background: var(--secondary);
+            color: var(--primary);
         }
         
-        .btn:hover:before {
-            width: 100%;
+        .cta-primary:hover {
+            background: white;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
         }
         
-        .btn:hover {
-            background: #ff5219;
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(255, 62, 0, 0.4);
-        }
-        
-        .btn:active {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 10px rgba(255, 62, 0, 0.4);
-        }
-        
-        .btn-outline {
+        .cta-secondary {
             background: transparent;
-            border: 2px solid var(--accent);
-            color: var(--accent);
-        }
-        
-        .btn-outline:hover {
-            background: var(--accent);
             color: white;
-            box-shadow: 0 10px 20px rgba(0, 168, 255, 0.4);
+            border: 2px solid var(--secondary);
         }
         
-        .btn-glow {
-            animation: pulse 2s infinite;
+        .cta-secondary:hover {
+            background: var(--secondary);
+            color: var(--primary);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
         }
         
-        @keyframes pulse {
-            0% {
-                box-shadow: 0 0 0 0 rgba(255, 62, 0, 0.7);
-            }
-            70% {
-                box-shadow: 0 0 0 10px rgba(255, 62, 0, 0);
-            }
-            100% {
-                box-shadow: 0 0 0 0 rgba(255, 62, 0, 0);
-            }
+        /* Services Banner */
+        .services-banner {
+            background: var(--primary);
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
         }
         
-        /* Services Section */
-        .services {
-            padding: 5rem 0;
-            background-color: var(--primary);
-            position: relative;
+        .services-banner-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
         }
         
-        .services::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: url('https://images.unsplash.com/photo-1514525253161-7a46d19cd819?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
-            opacity: 0.05;
+        .services-banner h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: var(--secondary);
         }
         
-        .section-title {
+        .services-grid-banner {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        .service-item {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 1.5rem;
+            border-radius: 10px;
+            transition: var(--transition);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            cursor: pointer;
+        }
+        
+        .service-item:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-5px);
+            border-color: var(--secondary);
+        }
+        
+        .service-item i {
+            font-size: 2.5rem;
+            color: var(--secondary);
+            margin-bottom: 1rem;
+            display: block;
+        }
+        
+        .service-item h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Product Category Sections */
+        .product-category {
+            padding: 5rem 2rem;
+            background-color: white;
+        }
+        
+        .category-header {
             text-align: center;
             margin-bottom: 3rem;
-            position: relative;
         }
         
-        .section-title h2 {
+        .category-title {
             font-size: 2.5rem;
-            color: var(--light);
+            color: var(--primary);
+            margin-bottom: 1rem;
             position: relative;
-            display: inline-block;
-            padding-bottom: 1rem;
         }
         
-        .section-title h2:after {
+        .category-title:after {
             content: '';
             position: absolute;
-            width: 60px;
-            height: 3px;
+            width: 80px;
+            height: 4px;
             background-color: var(--secondary);
-            bottom: 0;
+            bottom: -15px;
             left: 50%;
             transform: translateX(-50%);
         }
         
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
+        .category-description {
+            max-width: 800px;
+            margin: 0 auto;
+            color: var(--dark);
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+        
+        /* Slideshow Container */
+        .slideshow-container {
+            max-width: 1000px;
             position: relative;
-            z-index: 2;
-        }
-        
-        .service-card {
-            background: rgba(18, 18, 18, 0.8);
-            border-radius: 8px;
+            margin: auto;
+            margin-top: 3rem;
+            border-radius: 10px;
             overflow: hidden;
-            box-shadow: var(--shadow);
-            transition: var(--transition);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            height: 500px;
         }
         
-        .service-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.5);
-            border-color: var(--accent);
-        }
-        
-        .service-img {
-            height: 200px;
-            overflow: hidden;
-        }
-        
-        .service-img img {
-            width: 100%;
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
             height: 100%;
-            object-fit: cover;
-            transition: var(--transition);
         }
         
-        .service-card:hover .service-img img {
-            transform: scale(1.1);
+        .slide {
+            min-width: 100%;
+            position: relative;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f9f9f9;
         }
         
-        .service-content {
-            padding: 1.5rem;
+        .slide img {
+            max-width: 100%;
+            max-height: 100%;
+            width: auto;
+            height: auto;
+            object-fit: contain;
         }
         
-        .service-content h3 {
-            font-size: 1.5rem;
-            color: var(--light);
-            margin-bottom: 0.5rem;
+        .slide-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(139, 115, 85, 0.8);
+            color: white;
+            padding: 1rem;
+            text-align: center;
         }
         
-        .service-content p {
-            color: var(--text);
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: white;
+            font-weight: bold;
+            font-size: 24px;
+            transition: 0.3s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 10;
+        }
+        
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+        
+        .prev:hover, .next:hover {
+            background-color: rgba(212, 175, 55, 0.8);
+        }
+        
+        .dots-container {
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .dot {
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 5px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.3s ease;
+        }
+        
+        .dot.active, .dot:hover {
+            background-color: var(--secondary);
+        }
+        
+        /* Product Portfolio Section */
+        .product-portfolio {
+            padding: 6rem 2rem;
+            background-color: var(--light);
+        }
+        
+        .portfolio-container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .portfolio-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        
+        .portfolio-title {
+            font-size: 2.8rem;
+            color: var(--primary);
             margin-bottom: 1rem;
-            font-size: 0.95rem;
+            position: relative;
         }
         
-        /* Portfolio Section */
-        .portfolio {
-            padding: 5rem 0;
-            background-color: var(--dark);
+        .portfolio-title:after {
+            content: '';
+            position: absolute;
+            width: 100px;
+            height: 4px;
+            background-color: var(--secondary);
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
         }
         
-        .portfolio-filters {
+        .portfolio-description {
+            max-width: 800px;
+            margin: 2rem auto 0;
+            color: var(--dark);
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+        
+        /* Product Filter */
+        .product-filter {
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
-            margin-bottom: 2rem;
+            gap: 1rem;
+            margin-bottom: 3rem;
         }
         
         .filter-btn {
-            background: rgba(255, 255, 255, 0.1);
-            border: none;
-            padding: 0.5rem 1.5rem;
-            margin: 0 0.5rem 1rem;
+            background: rgba(212, 175, 55, 0.1);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            color: var(--dark);
+            padding: 0.7rem 1.5rem;
+            border-radius: 30px;
             cursor: pointer;
-            font-weight: 600;
-            color: var(--light);
             transition: var(--transition);
-            border-radius: 4px;
-            text-transform: uppercase;
-            font-size: 0.8rem;
-            letter-spacing: 1px;
+            font-weight: 500;
         }
         
-        .filter-btn.active, .filter-btn:hover {
+        .filter-btn.active,
+        .filter-btn:hover {
             background: var(--secondary);
-            color: white;
+            color: var(--primary);
+            transform: translateY(-2px);
         }
         
-        .portfolio-grid {
+        /* Product Cards Layout */
+        .products-grid-portfolio {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 1.5rem;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
         }
         
-        .portfolio-item {
-            position: relative;
-            border-radius: 8px;
+        .product-card-portfolio {
+            background: white;
+            border-radius: 15px;
             overflow: hidden;
-            height: 300px;
-            box-shadow: var(--shadow);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: var(--transition);
+            border: 1px solid rgba(212, 175, 55, 0.1);
         }
         
-        .portfolio-img {
+        .product-card-portfolio:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(139, 115, 85, 0.2);
+            border-color: var(--secondary);
+        }
+        
+        .product-media {
+            position: relative;
+            height: 250px;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f9f9f9;
+        }
+        
+        .product-media img {
+            max-width: 100%;
+            max-height: 100%;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+            transition: var(--transition);
+        }
+        
+        .product-card-portfolio:hover .product-media img {
+            transform: scale(1.05);
+        }
+        
+        .product-tag {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: rgba(139, 115, 85, 0.9);
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+        
+        .product-info {
+            padding: 1.5rem;
+        }
+        
+        .product-category {
+            color: var(--secondary);
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 0.5rem;
+        }
+        
+        .product-title {
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+        
+        .product-price {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--dark);
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+            font-weight: bold;
+        }
+        
+        .product-price i {
+            color: var(--secondary);
+        }
+        
+        .product-description {
+            color: var(--dark);
+            font-size: 0.95rem;
+            line-height: 1.5;
+            margin-bottom: 1.5rem;
+        }
+        
+        .product-features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .feature-tag {
+            background: rgba(212, 175, 55, 0.1);
+            color: var(--secondary);
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            border: 1px solid rgba(212, 175, 55, 0.2);
+        }
+        
+        .product-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--secondary);
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+        
+        .product-link:hover {
+            gap: 0.8rem;
+            color: var(--primary);
+        }
+        
+        /* Testimonials Section */
+        .testimonials-section {
+            padding: 6rem 2rem;
+            background-color: var(--light);
+        }
+        
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .testimonial-card {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: var(--transition);
+            border: 1px solid rgba(212, 175, 55, 0.1);
+        }
+        
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(139, 115, 85, 0.2);
+            border-color: var(--secondary);
+        }
+        
+        .testimonial-content {
+            font-style: italic;
+            margin-bottom: 1.5rem;
+            color: var(--dark);
+            line-height: 1.6;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .author-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            overflow: hidden;
+            background-color: var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+        
+        .author-info h4 {
+            color: var(--primary);
+            margin-bottom: 0.2rem;
+        }
+        
+        .author-info p {
+            color: var(--dark);
+            font-size: 0.9rem;
+        }
+        
+        /* Blog Section */
+        .blog {
+            padding: 6rem 2rem;
+            background-color: white;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .blog-card {
+            background: var(--light);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: var(--transition);
+            border: 1px solid rgba(212, 175, 55, 0.1);
+        }
+        
+        .blog-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(139, 115, 85, 0.2);
+            border-color: var(--secondary);
+        }
+        
+        .blog-card img {
             width: 100%;
-            height: 100%;
+            height: 200px;
             object-fit: cover;
             transition: var(--transition);
         }
         
-        .portfolio-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(10, 14, 23, 0.9);
+        .blog-card:hover img {
+            transform: scale(1.05);
+        }
+        
+        .blog-card h4 {
+            color: var(--primary);
+            margin: 1rem 1rem 0.5rem;
+        }
+        
+        .blog-card p {
+            color: var(--dark);
+            margin: 0 1rem 1rem;
+        }
+        
+        /* Contact Section */
+        .contact {
+            padding: 6rem 2rem;
+            background-color: var(--light);
+        }
+        
+        .contact-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+        }
+        
+        .contact-info {
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            gap: 1.5rem;
+        }
+        
+        .contact-item {
+            display: flex;
             align-items: center;
-            opacity: 0;
-            transition: var(--transition);
-            padding: 2rem;
-            text-align: center;
-            color: white;
-        }
-        
-        .portfolio-item:hover .portfolio-overlay {
-            opacity: 1;
-        }
-        
-        .portfolio-item:hover .portfolio-img {
-            transform: scale(1.1);
-        }
-        
-        /* About Section */
-        .about {
-            padding: 5rem 0;
-            background: linear-gradient(to right, var(--primary), #1a2238);
-            position: relative;
-        }
-        
-        .about::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: url('https://images.unsplash.com/photo-1519677100203-a0e668c92439?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
-            opacity: 0.05;
-        }
-        
-        .about-content {
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            justify-content: space-between;
-            position: relative;
-            z-index: 2;
-        }
-        
-        .about-text {
-            flex: 1;
-            min-width: 300px;
-            padding: 2rem;
-        }
-        
-        .about-image {
-            flex: 1;
-            min-width: 300px;
-            padding: 2rem;
-        }
-        
-        .about-image img {
-            width: 100%;
-            border-radius: 8px;
-            box-shadow: var(--shadow);
-        }
-        
-        .features {
-            display: flex;
-            flex-wrap: wrap;
-            margin: 1.5rem 0;
-        }
-        
-        .feature {
-            flex: 1;
-            min-width: 150px;
-            margin: 0.5rem;
-            padding: 1rem;
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 8px;
-            text-align: center;
-        }
-        
-        .feature i {
-            font-size: 2rem;
-            color: var(--accent);
-            margin-bottom: 0.5rem;
-        }
-        
-        /* Testimonials */
-        .testimonials {
-            padding: 5rem 0;
-            background: linear-gradient(to right, #0a0e17, #1d2b3a);
-            color: white;
-            position: relative;
-        }
-        
-        .testimonials::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: url('https://images.unsplash.com/photo-1501386761578-eac5c94b800a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
-            opacity: 0.05;
-        }
-        
-        .testimonials .section-title h2 {
-            color: white;
-        }
-        
-        .testimonial-slider {
-            max-width: 800px;
-            margin: 0 auto;
-            position: relative;
-            z-index: 2;
-        }
-        
-        .testimonial {
-            text-align: center;
-            padding: 2rem;
-        }
-        
-        .testimonial-text {
-            font-size: 1.2rem;
-            font-style: italic;
-            margin-bottom: 1.5rem;
-            position: relative;
-            padding: 0 2rem;
-        }
-        
-        .testimonial-text:before, .testimonial-text:after {
-            content: """;
-            font-size: 4rem;
-            color: rgba(255, 255, 255, 0.2);
-            position: absolute;
-        }
-        
-        .testimonial-text:before {
-            top: -30px;
-            left: -20px;
-        }
-        
-        .testimonial-text:after {
-            content: '"';
-            bottom: -60px;
-            right: -20px;
-        }
-        
-        .testimonial-author {
-            font-weight: 600;
-            font-size: 1.1rem;
-            color: var(--accent);
-        }
-        
-        /* Ticket Booking Section */
-        .booking {
-            padding: 5rem 0;
-            background: linear-gradient(to right, #0a0e17, #1a2238);
-            position: relative;
-        }
-        
-        .booking::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: url('https://images.unsplash.com/photo-1540039155733-5bb30b53aa14?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
-            opacity: 0.05;
-        }
-        
-        .booking-form {
-            background: rgba(18, 18, 18, 0.9);
-            padding: 2.5rem;
-            border-radius: 10px;
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
-            max-width: 800px;
-            margin: 0 auto;
-            position: relative;
-            z-index: 2;
-            border: 1px solid rgba(255, 62, 0, 0.2);
-        }
-        
-        .form-group {
-            margin-bottom: 1.5rem;
-        }
-        
-        .form-group label {
-            display: block;
-            margin-bottom: 0.5rem;
-            font-weight: 600;
-            color: var(--light);
-        }
-        
-        .form-control {
-            width: 100%;
-            padding: 0.8rem 1rem;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            border-radius: 4px;
-            background: rgba(255, 255, 255, 0.1);
-            color: var(--light);
-            font-family: 'Montserrat', sans-serif;
-            transition: var(--transition);
-        }
-        
-        .form-control:focus {
-            outline: none;
-            border-color: var(--accent);
-            box-shadow: 0 0 0 3px rgba(0, 168, 255, 0.2);
-        }
-        
-        .form-row {
-            display: flex;
             gap: 1rem;
-            margin-bottom: 1.5rem;
         }
         
-        .form-row .form-group {
-            flex: 1;
-            margin-bottom: 0;
-        }
-        
-        .booking-success {
-            display: none;
-            text-align: center;
-            padding: 2rem;
-            background: rgba(0, 168, 255, 0.1);
-            border-radius: 8px;
-            margin-top: 1.5rem;
-            border: 1px solid var(--accent);
-        }
-        
-        .booking-success i {
-            font-size: 3rem;
-            color: var(--accent);
-            margin-bottom: 1rem;
-        }
-        
-        /* CTA Section */
-        .cta {
-            padding: 5rem 0;
-            text-align: center;
-            background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80') no-repeat center center/cover;
-            color: white;
-            position: relative;
-        }
-        
-        .cta::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: url('https://images.unsplash.com/photo-1571330735066-03aaa9429d89?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80') no-repeat center center/cover;
-            opacity: 0.2;
-        }
-        
-        .cta h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1.5rem;
-            position: relative;
-            z-index: 2;
-        }
-        
-        .cta p {
-            max-width: 600px;
-            margin: 0 auto 2rem;
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--secondary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
             font-size: 1.2rem;
-            position: relative;
-            z-index: 2;
+        }
+        
+        .contact-item p {
+            color: var(--dark);
+        }
+        
+        .contact-item a {
+            color: var(--dark);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .contact-item a:hover {
+            color: var(--primary);
+        }
+        
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        
+        .contact-form input,
+        .contact-form textarea,
+        .contact-form select {
+            padding: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: var(--transition);
+            background: white;
+            color: var(--dark);
+        }
+        
+        .contact-form input:focus,
+        .contact-form textarea:focus,
+        .contact-form select:focus {
+            border-color: var(--secondary);
+            outline: none;
+            box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.2);
+        }
+        
+        .contact-form input::placeholder,
+        .contact-form textarea::placeholder {
+            color: #888;
+        }
+        
+        .submit-btn {
+            background: var(--primary);
+            color: white;
+            padding: 1rem;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: var(--transition);
+            margin-top: 1rem;
+        }
+        
+        .submit-btn:hover {
+            background: var(--accent);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(139, 115, 85, 0.3);
         }
         
         /* Footer */
-        footer {
-            background-color: var(--primary);
+        .footer {
+            background: var(--primary);
             color: white;
-            padding: 4rem 0 2rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 3rem 0 1rem;
         }
         
         .footer-content {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
         }
         
         .footer-section h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1.5rem;
-            position: relative;
-            padding-bottom: 0.5rem;
-            color: var(--light);
-        }
-        
-        .footer-section h3:after {
-            content: '';
-            position: absolute;
-            width: 50px;
-            height: 2px;
-            background-color: var(--secondary);
-            bottom: 0;
-            left: 0;
-            transform: none;
-        }
-        
-        .footer-contact p {
-            margin-bottom: 0.5rem;
-            display: flex;
-            align-items: center;
-        }
-        
-        .footer-contact i {
-            margin-right: 10px;
             color: var(--secondary);
+            margin-bottom: 1.5rem;
+            font-size: 1.3rem;
         }
         
-        .footer-links ul {
+        .footer-section p {
+            margin-bottom: 1rem;
+            line-height: 1.6;
+            color: rgba(255, 255, 255, 0.8);
+        }
+        
+        .footer-section ul {
             list-style: none;
         }
         
-        .footer-links li {
+        .footer-section li {
             margin-bottom: 0.8rem;
         }
         
-        .footer-links a {
-            color: var(--text);
+        .footer-section a {
+            color: rgba(255, 255, 255, 0.8);
             text-decoration: none;
             transition: var(--transition);
         }
         
-        .footer-links a:hover {
+        .footer-section a:hover {
             color: var(--secondary);
-            margin-left: 5px;
         }
         
-        .footer-social {
+        .social-links {
             display: flex;
+            gap: 1rem;
             margin-top: 1.5rem;
         }
         
-        .footer-social a {
-            display: flex;
-            justify-content: center;
-            align-items: center;
+        .social-link {
             width: 40px;
             height: 40px;
             border-radius: 50%;
-            background-color: rgba(255, 255, 255, 0.1);
-            color: white;
-            margin-right: 1rem;
+            background: rgba(212, 175, 55, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--secondary);
             transition: var(--transition);
         }
         
-        .footer-social a:hover {
-            background-color: var(--secondary);
-            transform: translateY(-5px);
+        .social-link:hover {
+            background: var(--secondary);
+            color: var(--primary);
+            transform: translateY(-3px);
         }
         
         .footer-bottom {
             text-align: center;
-            padding-top: 3rem;
             margin-top: 3rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(212, 175, 55, 0.2);
             font-size: 0.9rem;
-            color: rgba(255, 255, 255, 0.6);
+            color: rgba(255, 255, 255, 0.7);
         }
         
-        /* Responsive Design */
-        @media (max-width: 992px) {
-            .hero h2 {
-                font-size: 2.8rem;
-            }
-            
-            nav ul {
+        /* Animations */
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease-out;
+        }
+        
+        .animate-on-scroll.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Responsive */
+        @media screen and (max-width: 768px) {
+            .nav-menu {
                 display: none;
-                flex-direction: column;
                 position: absolute;
                 top: 100%;
                 left: 0;
-                width: 100%;
-                background-color: rgba(10, 14, 23, 0.95);
-                box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+                right: 0;
+                background: white;
+                flex-direction: column;
                 padding: 1rem 0;
-                z-index: 1000;
+                text-align: center;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
             }
             
-            nav ul.show {
+            .nav-menu.active {
                 display: flex;
             }
             
-            nav ul li {
-                margin: 0;
-                padding: 0.8rem 2rem;
+            .mobile-menu {
+                display: flex;
             }
             
-            .menu-toggle {
-                display: block;
+            .mobile-menu.active span:nth-child(1) {
+                transform: rotate(45deg) translate(5px, 5px);
             }
             
-            .tagline {
-                display: none;
+            .mobile-menu.active span:nth-child(2) {
+                opacity: 0;
             }
             
-            .form-row {
-                flex-direction: column;
-                gap: 0;
+            .mobile-menu.active span:nth-child(3) {
+                transform: rotate(-45deg) translate(7px, -6px);
             }
-        }
-        
-        @media (max-width: 768px) {
-            .hero h2 {
-                font-size: 2.2rem;
+            
+            .hero h1 {
+                font-size: 2.5rem;
             }
             
             .hero p {
                 font-size: 1rem;
             }
             
-            .section-title h2 {
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .section-title, .category-title {
                 font-size: 2rem;
             }
             
-            .about-content {
-                flex-direction: column;
+            .services-grid-banner {
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
             }
             
-            .booking-form {
-                padding: 1.5rem;
+            .slideshow-container {
+                height: 300px;
+            }
+            
+            .products-grid-portfolio {
+                grid-template-columns: 1fr;
+            }
+            
+            .product-filter {
+                gap: 0.5rem;
+            }
+            
+            .filter-btn {
+                padding: 0.5rem 1rem;
+                font-size: 0.9rem;
+            }
+            
+            .testimonials-grid {
+                grid-template-columns: 1fr;
             }
         }
-        
-        @media (max-width: 576px) {
-            .hero h2 {
-                font-size: 1.8rem;
+
+        @media screen and (max-width: 480px) {
+            .product-portfolio {
+                padding: 4rem 1rem;
             }
             
-            .btn {
-                padding: 0.6rem 1.5rem;
+            .portfolio-title {
+                font-size: 2.2rem;
             }
             
-            .service-card, .portfolio-item {
-                height: auto;
+            .slideshow-container {
+                height: 250px;
             }
             
-            .logo h1 {
-                font-size: 1.2rem;
+            .slide-caption {
+                padding: 0.5rem;
+                font-size: 0.9rem;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Header & Navigation -->
-    <header>
-        <div class="container header-content">
-            <div class="logo">
-                <h1>DERTS.SOUND.SOLUTIONS</h1>
-                <div class="tagline">Quality Sound for Every Occasion</div>
-            </div>
-            <div class="menu-toggle">
-                <i class="fas fa-bars"></i>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#booking">Book Tickets</a></li>
-                    <li><a href="#testimonials">Testimonials</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
 
-    <!-- Hero Section with Video Background -->
-    <section class="hero" id="home">
-        <video class="video-background" autoplay muted loop playsinline>
-            <source src="https://res.cloudinary.com/dnxtuowlp/video/upload/v1757406017/medium-vecteezy_dj-work-in-a-nightclub-mixing-and-dancing-a-club-dj-mixes_54411251_medium_rrl4z5.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-            <h2>WE BRING THE VIBES</h2>
-            <p>Professional DJ | Sound Tech | Events Production based in Kenya. Providing quality sound for every occasion and creating unforgettable experiences.</p>
-            <div>
-                <a href="#booking" class="btn btn-glow">Book Now</a>
-                <a href="#portfolio" class="btn btn-outline">View Our Work</a>
+<!-- Header -->
+<header class="header">
+    <nav class="nav-container">
+        <div class="logo">
+            <!-- Furniture logo placeholder -->
+            <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTAiIGhlaWdodD0iNTAiIHZpZXdCb3g9IjAgMCA1MCA1MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjUwIiBoZWlnaHQ9IjUwIiBmaWxsPSIjOEI3MzU1Ii8+CjxwYXRoIGQ9Ik0xMi41IDI1TDM3LjUgMjUiIHN0cm9rZT0iI0Q0QUYzNyIgc3Ryb2tlLXdpZHRoPSIyIi8+CjxwYXRoIGQ9Ik0yNSAxMi41TDI1IDM3LjUiIHN0cm9rZT0iI0Q0QUYzNyIgc3Ryb2tlLXdpZHRoPSIyIi8+CjxyZWN0IHg9IjE1IiB5PSIxNSIgd2lkdGg9IjIwIiBoZWlnaHQ9IjIwIiBzdHJva2U9IiNENEFGMzciIHN0cm9rZS13aWR0aD0iMiIvPgo8L3N2Zz4K" alt="Lankah Home Furniture Logo">
+            <div class="logo-text">
+                <span class="company-name">LANKAH HOME FURNITURE</span>
+                <span class="company-tagline">PREMIUM FURNITURE & HOME DECOR</span>
             </div>
         </div>
-    </section>
+        <ul class="nav-menu">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Collections</a></li>
+            <li><a href="#product-portfolio">Products</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#blog">Inspiration</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="mobile-menu"><span></span><span></span><span></span></div>
+        <a href="#contact" class="contact-btn">Get Quote</a>
+    </nav>
+</header>
 
-    <!-- Services Section -->
-    <section class="services" id="services">
-        <div class="container">
-            <div class="section-title">
-                <h2>Our Services</h2>
-                <p>Professional audio and event solutions for all occasions</p>
+<!-- Hero Section with Image Background -->
+<section id="home" class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <h1>Transform Your Space With Elegance</h1>
+        <p>Lankah Home Furniture brings you premium furniture and home decor that combines style, comfort, and exceptional craftsmanship.</p>
+        <div class="cta-buttons">
+            <a href="#product-portfolio" class="cta-btn cta-primary">Explore Collections</a>
+            <a href="#contact" class="cta-btn cta-secondary">Book Consultation</a>
+        </div>
+    </div>
+</section>
+
+<!-- Services Banner -->
+<section class="services-banner">
+    <div class="services-banner-content">
+        <h2>Our Furniture Collections</h2>
+        <div class="services-grid-banner">
+            <div class="service-item" data-service="living-room">
+                <i class="fas fa-couch"></i>
+                <h3>Living Room</h3>
             </div>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-img">
-                        <img src="https://images.unsplash.com/photo-1506157786151-b8491531f063?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="DJ Services">
-                    </div>
-                    <div class="service-content">
-                        <h3>DJ Services</h3>
-                        <p>Professional DJs for all events including weddings, corporate events, parties, and more. We bring the perfect vibe for any occasion.</p>
-                        <a href="#booking" class="btn">Book DJ</a>
-                    </div>
-                </div>
-                <div class="service-card">
-                    <div class="service-img">
-                        <img src="https://images.unsplash.com/photo-1571330735066-03aaa9429d89?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Sound Equipment">
-                    </div>
-                    <div class="service-content">
-                        <h3>Sound Equipment</h3>
-                        <p>High-quality sound systems for events of all sizes. From intimate gatherings to large festivals, we have the right equipment.</p>
-                        <a href="#booking" class="btn">Rent Equipment</a>
-                    </div>
-                </div>
-                <div class="service-card">
-                    <div class="service-img">
-                        <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Event Production">
-                    </div>
-                    <div class="service-content">
-                        <h3>Event Production</h3>
-                        <p>Full event production services including lighting, staging, and audio-visual solutions to make your event unforgettable.</p>
-                        <a href="#booking" class="btn">Plan Event</a>
-                    </div>
-                </div>
+            <div class="service-item" data-service="bedroom">
+                <i class="fas fa-bed"></i>
+                <h3>Bedroom</h3>
+            </div>
+            <div class="service-item" data-service="dining">
+                <i class="fas fa-utensils"></i>
+                <h3>Dining</h3>
+            </div>
+            <div class="service-item" data-service="office">
+                <i class="fas fa-desktop"></i>
+                <h3>Office</h3>
+            </div>
+            <div class="service-item" data-service="outdoor">
+                <i class="fas fa-umbrella-beach"></i>
+                <h3>Outdoor</h3>
+            </div>
+            <div class="service-item" data-service="decor">
+                <i class="fas fa-palette"></i>
+                <h3>Home Decor</h3>
+            </div>
+            <div class="service-item" data-service="custom">
+                <i class="fas fa-hammer"></i>
+                <h3>Custom Pieces</h3>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Portfolio Section -->
-    <section class="portfolio" id="portfolio">
-        <div class="container">
-            <div class="section-title">
-                <h2>Our Portfolio</h2>
-                <p>Check out our recent events and projects</p>
+<!-- Living Room Section -->
+<section id="living-room" class="product-category">
+    <div class="container">
+        <div class="category-header">
+            <h2 class="category-title animate-on-scroll">Living Room Collection</h2>
+            <p class="category-description animate-on-scroll">Create the perfect gathering space with our premium living room furniture. From luxurious sofas to elegant coffee tables, transform your living area into a comfortable and stylish retreat.</p>
+        </div>
+        <div class="slideshow-container animate-on-scroll">
+            <div class="slides">
+                <div class="slide">
+                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1759467900/Sofa1_clba94.jpg" alt="Living Room Sofa 1">
+                    <div class="slide-caption">Modern Living Room Sofa</div>
+                </div>
+                <div class="slide">
+                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1759467901/SOFA2_om87jm.jpg" alt="Living Room Sofa 2">
+                    <div class="slide-caption">Luxury Sectional Sofa</div>
+                </div>
+                <div class="slide">
+                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1759467902/Sofa3_2_jsxzdy.jpg" alt="Living Room Sofa 3">
+                    <div class="slide-caption">Contemporary Living Space</div>
+                </div>
+                <div class="slide">
+                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1759467903/SOFA3_gfxemi.jpg" alt="Living Room Sofa 4">
+                    <div class="slide-caption">Elegant Lounge Setting</div>
+                </div>
+                <div class="slide">
+                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1759467903/sofa4_iadvyh.jpg" alt="Living Room Sofa 5">
+                    <div class="slide-caption">Premium Sofa Collection</div>
+                </div>
             </div>
-            <div class="portfolio-filters">
-                <button class="filter-btn active" data-filter="all">All Events</button>
-                <button class="filter-btn" data-filter="wedding">Weddings</button>
-                <button class="filter-btn" data-filter="corporate">Corporate</button>
-                <button class="filter-btn" data-filter="party">Parties</button>
-            </div>
-            <div class="portfolio-grid">
-                <div class="portfolio-item" data-category="wedding">
-                    <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Wedding Event" class="portfolio-img">
-                    <div class="portfolio-overlay">
-                        <h3>Sarah & Michael's Wedding</h3>
-                        <p>Full sound and DJ services for a beautiful beachfront ceremony</p>
-                    </div>
-                </div>
-                <div class="portfolio-item" data-category="corporate">
-                    <img src="https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Corporate Event" class="portfolio-img">
-                    <div class="portfolio-overlay">
-                        <h3>Tech Conference</h3>
-                        <p>Audio-visual production for a major tech industry conference</p>
-                    </div>
-                </div>
-                <div class="portfolio-item" data-category="party">
-                    <img src="https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Birthday Party" class="portfolio-img">
-                    <div class="portfolio-overlay">
-                        <h3>Sophia's Sweet 16</h3>
-                        <p>DJ and sound system for a magical birthday celebration</p>
-                    </div>
-                </div>
-                <div class="portfolio-item" data-category="wedding">
-                    <img src="https://images.unsplash.com/photo-1560087637-bf797bc7796a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Wedding Event" class="portfolio-img">
-                    <div class="portfolio-overlay">
-                        <h3>Jennifer & Robert's Wedding</h3>
-                        <p>Elegant vineyard celebration with full audio services</p>
-                    </div>
-                </div>
-                <div class="portfolio-item" data-category="corporate">
-                    <img src="https://images.unsplash.com/photo-1552581234-26160f608093?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Product Launch" class="portfolio-img">
-                    <div class="portfolio-overlay">
-                        <h3>Product Launch Event</h3>
-                        <p>Sound and lighting for an immersive product experience</p>
-                    </div>
-                </div>
-                <div class="portfolio-item" data-category="party">
-                    <img src="https://images.unsplash.com/photo-1540039155733-5bb30b53aa14?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Club Night" class="portfolio-img">
-                    <div class="portfolio-overlay">
-                        <h3>Club Night</h3>
-                        <p>High-energy DJ set and sound system for a nightclub event</p>
-                    </div>
-                </div>
+            <a class="prev">&#10094;</a>
+            <a class="next">&#10095;</a>
+            <div class="dots-container">
+                <span class="dot active" data-slide="0"></span>
+                <span class="dot" data-slide="1"></span>
+                <span class="dot" data-slide="2"></span>
+                <span class="dot" data-slide="3"></span>
+                <span class="dot" data-slide="4"></span>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- About Section -->
-    <section class="about" id="about">
-        <div class="container">
-            <div class="section-title">
-                <h2>About Us</h2>
-                <p>Learn more about DERTS.SOUND.SOLUTIONS</p>
+<!-- Bedroom Section -->
+<section id="bedroom" class="product-category">
+    <div class="container">
+        <div class="category-header">
+            <h2 class="category-title animate-on-scroll">Bedroom Collection</h2>
+            <p class="category-description animate-on-scroll">Transform your bedroom into a sanctuary of comfort and style with our premium bedroom furniture. From elegant bed frames to functional storage solutions, create your perfect retreat.</p>
+        </div>
+        <div class="slideshow-container animate-on-scroll">
+            <div class="slides">
+                <div class="slide">
+                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1759467778/bed1_tm5ldy.jpg" alt="Bedroom Design 1">
+                    <div class="slide-caption">Luxury Master Bedroom</div>
+                </div>
+                <div class="slide">
+                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1759467776/Bed_gtsv2m.jpg" alt="Bedroom Design 2">
+                    <div class="slide-caption">Modern Bedroom Suite</div>
+                </div>
+                <div class="slide">
+                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1759467777/Bed3_rhxb9b.jpg" alt="Bedroom Design 3">
+                    <div class="slide-caption">Cozy Bedroom Retreat</div>
+                </div>
+                <div class="slide">
+                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1759467776/527788918_1180423707437306_795955402191206739_n_cncfv3.jpg" alt="Bedroom Design 4">
+                    <div class="slide-caption">Elegant Bedroom Set</div>
+                </div>
             </div>
-            <div class="about-content">
-                <div class="about-text">
-                    <h3>Quality Sound for Every Occasion</h3>
-                    <p>DERTS.SOUND.SOLUTIONS is a premier audio and event production company based in Kenya. We specialize in providing top-quality sound systems, professional DJ services, and complete event production solutions.</p>
-                    <p>With years of experience in the industry, we have built a reputation for excellence, reliability, and creating unforgettable experiences for our clients.</p>
-                    
-                    <div class="features">
-                        <div class="feature">
-                            <i class="fas fa-music"></i>
-                            <h4>DJ Services</h4>
-                        </div>
-                        <div class="feature">
-                            <i class="fas fa-volume-up"></i>
-                            <h4>Sound Tech</h4>
-                        </div>
-                        <div class="feature">
-                            <i class="fas fa-lightbulb"></i>
-                            <h4>Lighting</h4>
-                        </div>
-                        <div class="feature">
-                            <i class="fas fa-calendar-alt"></i>
-                            <h4>Event Production</h4>
-                        </div>
-                    </div>
-                </div>
-                <div class="about-image">
-                    <img src="https://images.unsplash.com/photo-1571330735066-03aaa9429d89?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="About Us">
-                </div>
+            <a class="prev">&#10094;</a>
+            <a class="next">&#10095;</a>
+            <div class="dots-container">
+                <span class="dot active" data-slide="0"></span>
+                <span class="dot" data-slide="1"></span>
+                <span class="dot" data-slide="2"></span>
+                <span class="dot" data-slide="3"></span>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Ticket Booking Section -->
-    <section class="booking" id="booking">
-        <div class="container">
-            <div class="section-title">
-                <h2>Book Tickets & Services</h2>
-                <p>Reserve your spot or request our services for your event</p>
+<!-- Dining Section -->
+<section id="dining" class="product-category">
+    <div class="container">
+        <div class="category-header">
+            <h2 class="category-title animate-on-scroll">Dining Collection</h2>
+            <p class="category-description animate-on-scroll">Elevate your dining experience with our exquisite dining furniture. From formal dining sets to casual breakfast nooks, create the perfect space for meals and gatherings.</p>
+        </div>
+        <div class="slideshow-container animate-on-scroll">
+            <div class="slides">
+                <div class="slide">
+                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1759467971/Dining_1_bbmicg.jpg" alt="Dining Room Design 1">
+                    <div class="slide-caption">Formal Dining Room Set</div>
+                </div>
+                <div class="slide">
+                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1759467972/Dining_gefkje.jpg" alt="Dining Room Design 2">
+                    <div class="slide-caption">Modern Dining Area</div>
+                </div>
+                <div class="slide">
+                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1759468321/Dining_2_ewppvz.jpg" alt="Dining Room Design 3">
+                    <div class="slide-caption">Elegant Dining Table</div>
+                </div>
+                <div class="slide">
+                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1759468322/dining_5_yej2hp.jpg" alt="Dining Room Design 4">
+                    <div class="slide-caption">Contemporary Dining Space</div>
+                </div>
+                <div class="slide">
+                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1759468323/dinining_3_tqyxih.jpg" alt="Dining Room Design 5">
+                    <div class="slide-caption">Premium Dining Collection</div>
+                </div>
+            </div>
+            <a class="prev">&#10094;</a>
+            <a class="next">&#10095;</a>
+            <div class="dots-container">
+                <span class="dot active" data-slide="0"></span>
+                <span class="dot" data-slide="1"></span>
+                <span class="dot" data-slide="2"></span>
+                <span class="dot" data-slide="3"></span>
+                <span class="dot" data-slide="4"></span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Product Portfolio Section -->
+<section id="product-portfolio" class="product-portfolio">
+    <div class="portfolio-container">
+        <div class="portfolio-header">
+            <h2 class="portfolio-title animate-on-scroll">Featured Products</h2>
+            <p class="portfolio-description animate-on-scroll">Discover our curated selection of premium furniture pieces. Each item is crafted with attention to detail, quality materials, and timeless design.</p>
+        </div>
+        
+        <div class="product-filter">
+            <button class="filter-btn active" data-filter="all">All Products</button>
+            <button class="filter-btn" data-filter="sofas">Sofas</button>
+            <button class="filter-btn" data-filter="tables">Tables</button>
+            <button class="filter-btn" data-filter="beds">Beds</button>
+            <button class="filter-btn" data-filter="decor">Home Decor</button>
+        </div>
+        
+        <div class="products-grid-portfolio">
+            <!-- Product 1 -->
+            <div class="product-card-portfolio animate-on-scroll" data-category="sofas">
+                <div class="product-media">
+                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1759467900/Sofa1_clba94.jpg" alt="Luxury Sofa">
+                    <div class="product-tag">
+                        <i class="fas fa-tag"></i> Best Seller
+                    </div>
+                </div>
+                <div class="product-info">
+                    <div class="product-category">Sofas</div>
+                    <h3 class="product-title">Manhattan Luxury Sofa</h3>
+                    <div class="product-price">
+                        <i class="fas fa-tag"></i>
+                        <span>KSh 249,999</span>
+                    </div>
+                    <p class="product-description">Premium leather sofa with solid wood frame and high-density foam cushions for ultimate comfort and durability.</p>
+                    <div class="product-features">
+                        <span class="feature-tag">Premium Leather</span>
+                        <span class="feature-tag">Solid Wood Frame</span>
+                        <span class="feature-tag">5-Year Warranty</span>
+                    </div>
+                    <a href="#contact" class="product-link">Inquire Now <i class="fas fa-arrow-right"></i></a>
+                </div>
             </div>
             
-            <!-- Updated form with Formspree action -->
-            <form id="booking-form" class="booking-form" action="https://formspree.io/f/meshcliff99@gmail.com" method="POST">
-                <input type="hidden" name="_subject" value="New Booking from DERTS Website">
-                <input type="hidden" name="_replyto" value="customer@example.com">
-                
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="event-type">Event Type</label>
-                        <select class="form-control" id="event-type" name="event-type" required>
-                            <option value="">Select Event Type</option>
-                            <option value="wedding">Wedding</option>
-                            <option value="corporate">Corporate Event</option>
-                            <option value="birthday">Birthday Party</option>
-                            <option value="club">Club Night</option>
-                            <option value="concert">Concert</option>
-                            <option value="other">Other</option>
-                        </select>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="service-type">Service Needed</label>
-                        <select class="form-control" id="service-type" name="service-type" required>
-                            <option value="">Select Service</option>
-                            <option value="dj">DJ Services</option>
-                            <option value="sound">Sound Equipment</option>
-                            <option value="full">Full Event Production</option>
-                            <option value="lighting">Lighting Only</option>
-                            <option value="consultation">Consultation</option>
-                        </select>
+            <!-- Product 2 -->
+            <div class="product-card-portfolio animate-on-scroll" data-category="tables">
+                <div class="product-media">
+                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1759468321/Dining_2_ewppvz.jpg" alt="Dining Table">
+                    <div class="product-tag">
+                        <i class="fas fa-tag"></i> New Arrival
                     </div>
                 </div>
-                
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="event-date">Event Date</label>
-                        <input type="date" class="form-control" id="event-date" name="event-date" required>
+                <div class="product-info">
+                    <div class="product-category">Tables</div>
+                    <h3 class="product-title">Oak Extension Dining Table</h3>
+                    <div class="product-price">
+                        <i class="fas fa-tag"></i>
+                        <span>KSh 189,999</span>
                     </div>
-                    
-                    <div class="form-group">
-                        <label for="ticket-quantity">Number of Tickets (if applicable)</label>
-                        <input type="number" class="form-control" id="ticket-quantity" name="ticket-quantity" min="1" value="1">
+                    <p class="product-description">Solid oak dining table with extension leaves, seating up to 10 people. Perfect for family gatherings and entertaining.</p>
+                    <div class="product-features">
+                        <span class="feature-tag">Solid Oak</span>
+                        <span class="feature-tag">Extendable</span>
+                        <span class="feature-tag">Seats 8-10</span>
                     </div>
+                    <a href="#contact" class="product-link">Inquire Now <i class="fas fa-arrow-right"></i></a>
                 </div>
-                
-                <div class="form-group">
-                    <label for="name">Full Name</label>
-                    <input type="text" class="form-control" id="name" name="name" placeholder="Enter your full name" required>
-                </div>
-                
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="email">Email Address</label>
-                        <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="phone">Phone Number</label>
-                        <input type="tel" class="form-control" id="phone" name="phone" placeholder="Enter your phone number" required>
+            </div>
+            
+            <!-- Product 3 -->
+            <div class="product-card-portfolio animate-on-scroll" data-category="beds">
+                <div class="product-media">
+                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1759467778/bed1_tm5ldy.jpg" alt="King Size Bed">
+                    <div class="product-tag">
+                        <i class="fas fa-tag"></i> Premium
                     </div>
                 </div>
-                
-                <div class="form-group">
-                    <label for="message">Special Requests or Notes</label>
-                    <textarea class="form-control" id="message" name="message" rows="4" placeholder="Any special requirements or questions..."></textarea>
+                <div class="product-info">
+                    <div class="product-category">Beds</div>
+                    <h3 class="product-title">Canopy King Bed Frame</h3>
+                    <div class="product-price">
+                        <i class="fas fa-tag"></i>
+                        <span>KSh 320,000</span>
+                    </div>
+                    <p class="product-description">Elegant canopy bed frame in rich mahogany finish with upholstered headboard and integrated lighting.</p>
+                    <div class="product-features">
+                        <span class="feature-tag">Solid Mahogany</span>
+                        <span class="feature-tag">Upholstered Headboard</span>
+                        <span class="feature-tag">Integrated Lighting</span>
+                    </div>
+                    <a href="#contact" class="product-link">Inquire Now <i class="fas fa-arrow-right"></i></a>
                 </div>
-                
-                <button type="submit" class="btn">Complete Booking</button>
-                
-                <div class="booking-success" id="booking-success">
-                    <i class="fas fa-check-circle"></i>
-                    <h3>Booking Successful!</h3>
-                    <p>Thank you for your booking. We'll contact you shortly to confirm details.</p>
+            </div>
+            
+            <!-- Product 4 -->
+            <div class="product-card-portfolio animate-on-scroll" data-category="decor">
+                <div class="product-media">
+                    <img src="https://images.unsplash.com/photo-1582582621959-48d27397dc69?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80" alt="Home Decor">
+                    <div class="product-tag">
+                        <i class="fas fa-tag"></i> Handcrafted
+                    </div>
                 </div>
+                <div class="product-info">
+                    <div class="product-category">Home Decor</div>
+                    <h3 class="product-title">Artisan Wall Art Collection</h3>
+                    <div class="product-price">
+                        <i class="fas fa-tag"></i>
+                        <span>KSh 45,000</span>
+                    </div>
+                    <p class="product-description">Handcrafted wall art pieces that add character and elegance to any room. Each piece is unique and signed by the artist.</p>
+                    <div class="product-features">
+                        <span class="feature-tag">Handcrafted</span>
+                        <span class="feature-tag">Signed Artwork</span>
+                        <span class="feature-tag">Premium Materials</span>
+                    </div>
+                    <a href="#contact" class="product-link">Inquire Now <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            
+            <!-- Product 5 -->
+            <div class="product-card-portfolio animate-on-scroll" data-category="tables">
+                <div class="product-media">
+                    <img src="https://images.unsplash.com/photo-1533090368676-1fd25485db88?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80" alt="Coffee Table">
+                    <div class="product-tag">
+                        <i class="fas fa-tag"></i> Modern
+                    </div>
+                </div>
+                <div class="product-info">
+                    <div class="product-category">Tables</div>
+                    <h3 class="product-title">Geometric Coffee Table</h3>
+                    <div class="product-price">
+                        <i class="fas fa-tag"></i>
+                        <span>KSh 85,000</span>
+                    </div>
+                    <p class="product-description">Unique geometric coffee table with glass top and solid wood base. A statement piece for any living room.</p>
+                    <div class="product-features">
+                        <span class="feature-tag">Tempered Glass</span>
+                        <span class="feature-tag">Solid Wood Base</span>
+                        <span class="feature-tag">Unique Design</span>
+                    </div>
+                    <a href="#contact" class="product-link">Inquire Now <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            
+            <!-- Product 6 -->
+            <div class="product-card-portfolio animate-on-scroll" data-category="decor">
+                <div class="product-media">
+                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1759467903/sofa4_iadvyh.jpg" alt="Decorative Lamp">
+                    <div class="product-tag">
+                        <i class="fas fa-tag"></i> Designer
+                    </div>
+                </div>
+                <div class="product-info">
+                    <div class="product-category">Home Decor</div>
+                    <h3 class="product-title">Designer Floor Lamp</h3>
+                    <div class="product-price">
+                        <i class="fas fa-tag"></i>
+                        <span>KSh 32,000</span>
+                    </div>
+                    <p class="product-description">Elegant floor lamp with adjustable brightness and warm lighting. Perfect for creating ambiance in any room.</p>
+                    <div class="product-features">
+                        <span class="feature-tag">Adjustable Brightness</span>
+                        <span class="feature-tag">Warm Lighting</span>
+                        <span class="feature-tag">Modern Design</span>
+                    </div>
+                    <a href="#contact" class="product-link">Inquire Now <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonials Section -->
+<section id="testimonials" class="testimonials-section">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title animate-on-scroll">What Our Kenyan Clients Say</h2>
+            <p class="section-subtitle animate-on-scroll">Hear from satisfied customers across Kenya who have transformed their homes with Lankah furniture.</p>
+        </div>
+        
+        <div class="testimonials-grid">
+            <div class="testimonial-card animate-on-scroll">
+                <div class="testimonial-content">
+                    "Lankah Furniture transformed our living room completely! The quality of their sofas is exceptional - very durable and comfortable. As a family of five, we needed furniture that could withstand daily use, and Lankah delivered exactly that. The delivery to Eldoret was prompt and the installation team was very professional."
+                </div>
+                <div class="testimonial-author">
+                    <div class="author-avatar">
+                        GW
+                    </div>
+                    <div class="author-info">
+                        <h4>Grace Wanjiku</h4>
+                        <p>Eldoret, Uasin Gishu County</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="testimonial-card animate-on-scroll">
+                <div class="testimonial-content">
+                    "I was looking for quality office furniture for my startup in Nairobi, and Lankah exceeded my expectations. Their executive desk and conference table have impressed both my team and clients. The attention to detail in the woodwork is remarkable. What I appreciate most is how they understood our budget constraints and offered flexible payment options."
+                </div>
+                <div class="testimonial-author">
+                    <div class="author-avatar">
+                        DO
+                    </div>
+                    <div class="author-info">
+                        <h4>David Ochieng</h4>
+                        <p>Westlands, Nairobi</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="testimonial-card animate-on-scroll">
+                <div class="testimonial-content">
+                    "After searching for months for the perfect dining set, I found exactly what I needed at Lankah. The oak dining table and chairs have become the centerpiece of our home in Mombasa. Family gatherings have become more special with this beautiful furniture. The customer service was excellent - they even helped me coordinate with my interior designer."
+                </div>
+                <div class="testimonial-author">
+                    <div class="author-avatar">
+                        FA
+                    </div>
+                    <div class="author-info">
+                        <h4>Fatima Ali</h4>
+                        <p>Nyali, Mombasa</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="testimonial-card animate-on-scroll">
+                <div class="testimonial-content">
+                    "As a newly married couple setting up our first home in Kisumu, we were on a tight budget. Lankah helped us furnish our entire apartment with quality pieces that didn't break the bank. The bedroom set we purchased is not only beautiful but also very functional with ample storage. We highly recommend them to young couples starting out!"
+                </div>
+                <div class="testimonial-author">
+                    <div class="author-avatar">
+                        SM
+                    </div>
+                    <div class="author-info">
+                        <h4>Susan & Mark</h4>
+                        <p>Kisumu City</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="testimonial-card animate-on-scroll">
+                <div class="testimonial-content">
+                    "I run a guesthouse in Nakuru and needed durable, attractive furniture for all my rooms. Lankah provided exactly what I needed - pieces that are both beautiful and can withstand frequent use. Their bulk purchase discount made it affordable, and the delivery was on schedule. My guests often compliment the furniture, which adds to their positive experience."
+                </div>
+                <div class="testimonial-author">
+                    <div class="author-avatar">
+                        JK
+                    </div>
+                    <div class="author-info">
+                        <h4>James Kariuki</h4>
+                        <p>Nakuru Town</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="testimonial-card animate-on-scroll">
+                <div class="testimonial-content">
+                    "Living in a remote area of Bungoma, I was worried about furniture delivery, but Lankah made it seamless. The custom bookshelf they created for my home office is perfect - it fits the space exactly and holds all my books securely. The craftsmen clearly understood my needs and delivered beyond expectations. Asante sana Lankah!"
+                </div>
+                <div class="testimonial-author">
+                    <div class="author-avatar">
+                        PW
+                    </div>
+                    <div class="author-info">
+                        <h4>Peter Wanyama</h4>
+                        <p>Bungoma County</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Blog Section -->
+<section id="blog" class="blog">
+    <div class="container">
+        <h2 class="section-title animate-on-scroll">Design Inspiration</h2>
+        <p class="section-subtitle animate-on-scroll">Explore the latest trends, tips, and ideas for creating your dream home.</p>
+        <div class="blog-grid">
+            <div class="blog-card animate-on-scroll">
+                <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1759467901/SOFA2_om87jm.jpg" alt="Living Room Trends">
+                <h4>Top Living Room Trends for 2025</h4>
+                <p>Discover the latest design trends that are transforming living spaces this year.</p>
+            </div>
+            <div class="blog-card animate-on-scroll">
+                <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1759468322/dining_5_yej2hp.jpg" alt="Furniture Care">
+                <h4>How to Care for Your Wood Furniture</h4>
+                <p>Essential tips for maintaining the beauty and longevity of your wooden furniture pieces.</p>
+            </div>
+            <div class="blog-card animate-on-scroll">
+                <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1759467777/Bed3_rhxb9b.jpg" alt="Small Spaces">
+                <h4>Maximizing Small Spaces with Smart Furniture</h4>
+                <p>Creative solutions for making the most of compact living areas through strategic furniture choices.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="contact">
+    <div class="container">
+        <h2 class="section-title animate-on-scroll">Contact Us</h2>
+        <p class="section-subtitle animate-on-scroll">Ready to transform your space? Get in touch with our design team today.</p>
+        <div class="contact-content">
+            <div class="contact-info">
+                <div class="contact-item">
+                    <div class="contact-icon">📍</div>
+                    <p>Bungoma, Kenya</p>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">📞</div>
+                    <p>Phone: <a href="tel:+254707962387">+254 707 962 387</a></p>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">📧</div>
+                    <p>Email: <a href="mailto:info@lankahfurniture.com">info@lankahfurniture.com</a></p>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">🕒</div>
+                    <p>Mon - Fri: 9:00 AM - 6:00 PM<br>Sat: 10:00 AM - 4:00 PM</p>
+                </div>
+            </div>
+            <form class="contact-form">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <input type="tel" name="phone" placeholder="Your Phone">
+                <select name="service" required>
+                    <option value="">Select Service</option>
+                    <option value="consultation">Design Consultation</option>
+                    <option value="living-room">Living Room Furniture</option>
+                    <option value="bedroom">Bedroom Furniture</option>
+                    <option value="dining">Dining Furniture</option>
+                    <option value="office">Office Furniture</option>
+                    <option value="custom">Custom Furniture</option>
+                    <option value="other">Other</option>
+                </select>
+                <textarea name="message" rows="5" placeholder="Tell us about your project" required></textarea>
+                <button type="submit" class="submit-btn">Send Message</button>
             </form>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Testimonials Section -->
-    <section class="testimonials" id="testimonials">
-        <div class="container">
-            <div class="section-title">
-                <h2>Client Testimonials</h2>
-                <p>What our clients say about us</p>
-            </div>
-            <div class="testimonial-slider">
-                <div class="testimonial">
-                    <p class="testimonial-text">DERTS.SOUND.SOLUTIONS provided the sound and DJ services for our wedding, and they were absolutely incredible. The quality of the sound was exceptional, and the DJ kept everyone on the dance floor all night!</p>
-                    <p class="testimonial-author">- Emily & David</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="cta" id="contact">
-        <div class="container">
-            <h2>Ready to Bring Your Event to Life?</h2>
-            <p>Contact us today to discuss your event needs and how we can make it unforgettable with quality sound and production.</p>
-            <a href="#booking" class="btn">Get In Touch</a>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>DERTS.SOUND.SOLUTIONS</h3>
-                    <p>Professional DJ, sound tech, and event production services in Kenya. We bring the vibes and quality sound for every occasion.</p>
-                    <div class="footer-social">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="https://instagram.com/derts.sound.solutions" target="_blank"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-whatsapp"></i></a>
-                    </div>
-                </div>
-                <div class="footer-section">
-                    <h3>Quick Links</h3>
-                    <div class="footer-links">
-                        <ul>
-                            <li><a href="#home">Home</a></li>
-                            <li><a href="#services">Services</a></li>
-                            <li><a href="#portfolio">Portfolio</a></li>
-                            <li><a href="#about">About Us</a></li>
-                            <li><a href="#booking">Book Tickets</a></li>
-                            <li><a href="#contact">Contact</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="footer-section">
-                    <h3>Contact Us</h3>
-                    <div class="footer-contact">
-                        <p><i class="fas fa-phone"></i> 0794312610</p>
-                        <p><i class="fas fa-envelope"></i> info@dertsoundsolutions.com</p>
-                        <p><i class="fas fa-map-marker-alt"></i> Kenya</p>
-                        <p><i class="fab fa-instagram"></i> @derts.sound.solutions</p>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2023 DERTS.SOUND.SOLUTIONS. All rights reserved.</p>
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-section">
+            <h3>Lankah Home Furniture</h3>
+            <p>Transforming houses into homes with premium furniture and exceptional design services. Your trusted partner for creating beautiful, functional living spaces.</p>
+            <div class="social-links">
+                <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-tiktok"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-whatsapp"></i></a>
             </div>
         </div>
-    </footer>
+        <div class="footer-section">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Collections</a></li>
+                <li><a href="#product-portfolio">Products</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#blog">Inspiration</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>Collections</h3>
+            <ul>
+                <li><a href="#living-room">Living Room</a></li>
+                <li><a href="#bedroom">Bedroom</a></li>
+                <li><a href="#dining">Dining</a></li>
+                <li><a href="#office">Office</a></li>
+                <li><a href="#outdoor">Outdoor</a></li>
+                <li><a href="#decor">Home Decor</a></li>
+                <li><a href="#custom">Custom Pieces</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>Newsletter</h3>
+            <p>Subscribe to our newsletter for design tips, new arrivals, and exclusive offers.</p>
+            <form>
+                <input type="email" placeholder="Your Email" required>
+                <button type="submit" class="submit-btn">Subscribe</button>
+            </form>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        &copy; 2025 Lankah Home Furniture. All Rights Reserved.
+    </div>
+</footer>
 
-    <script>
-        // Mobile Menu Toggle
-        document.querySelector('.menu-toggle').addEventListener('click', function() {
-            document.querySelector('nav ul').classList.toggle('show');
+<script>
+    // Mobile Menu Toggle
+    const mobileMenu = document.querySelector('.mobile-menu');
+    const navMenu = document.querySelector('.nav-menu');
+
+    mobileMenu.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+        mobileMenu.classList.toggle('active');
+    });
+
+    // Scroll Animations
+    const scrollElements = document.querySelectorAll('.animate-on-scroll');
+
+    const elementInView = (el, dividend = 1) => {
+        const elementTop = el.getBoundingClientRect().top;
+        return (
+            elementTop <= (window.innerHeight || document.documentElement.clientHeight) / dividend
+        );
+    };
+
+    const displayScrollElement = (element) => {
+        element.classList.add('active');
+    };
+
+    const hideScrollElement = (element) => {
+        element.classList.remove('active');
+    };
+
+    const handleScrollAnimation = () => {
+        scrollElements.forEach((el) => {
+            if (elementInView(el, 1.25)) {
+                displayScrollElement(el);
+            } else {
+                hideScrollElement(el);
+            }
+        })
+    };
+
+    window.addEventListener('scroll', () => {
+        handleScrollAnimation();
+    });
+
+    // Initialize scroll animations on page load
+    window.addEventListener('load', () => {
+        handleScrollAnimation();
+    });
+
+    // Slideshow Functionality
+    function initSlideshow(slideshowContainer) {
+        const slides = slideshowContainer.querySelector('.slides');
+        const slideCount = slides.querySelectorAll('.slide').length;
+        const prevBtn = slideshowContainer.querySelector('.prev');
+        const nextBtn = slideshowContainer.querySelector('.next');
+        const dots = slideshowContainer.querySelectorAll('.dot');
+        
+        let currentSlide = 0;
+        
+        function goToSlide(n) {
+            currentSlide = (n + slideCount) % slideCount;
+            slides.style.transform = `translateX(-${currentSlide * 100}%)`;
+            
+            // Update dots
+            dots.forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentSlide);
+            });
+        }
+        
+        function nextSlide() {
+            goToSlide(currentSlide + 1);
+        }
+        
+        function prevSlide() {
+            goToSlide(currentSlide - 1);
+        }
+        
+        // Event listeners
+        nextBtn.addEventListener('click', nextSlide);
+        prevBtn.addEventListener('click', prevSlide);
+        
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => goToSlide(index));
         });
+        
+        // Auto-advance slides
+        let slideInterval = setInterval(nextSlide, 5000);
+        
+        // Pause on hover
+        slideshowContainer.addEventListener('mouseenter', () => {
+            clearInterval(slideInterval);
+        });
+        
+        slideshowContainer.addEventListener('mouseleave', () => {
+            slideInterval = setInterval(nextSlide, 5000);
+        });
+    }
+    
+    // Initialize all slideshows
+    document.addEventListener('DOMContentLoaded', () => {
+        const slideshowContainers = document.querySelectorAll('.slideshow-container');
+        slideshowContainers.forEach(initSlideshow);
+    });
 
-        // Portfolio Filtering
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            
+            const targetId = this.getAttribute('href');
+            if (targetId === '#') return;
+            
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                // Close mobile menu if open
+                navMenu.classList.remove('active');
+                mobileMenu.classList.remove('active');
+                
+                window.scrollTo({
+                    top: targetElement.offsetTop - 80,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+
+    // Service banner items scroll to their respective sections
+    document.querySelectorAll('.service-item').forEach(item => {
+        item.addEventListener('click', function() {
+            const serviceId = this.getAttribute('data-service');
+            const targetSection = document.getElementById(serviceId);
+            
+            if (targetSection) {
+                window.scrollTo({
+                    top: targetSection.offsetTop - 80,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+
+    // Form submission handling
+    const contactForm = document.querySelector('.contact-form');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! We will get back to you soon.');
+            this.reset();
+        });
+    }
+
+    // Product Portfolio Functionality
+    document.addEventListener('DOMContentLoaded', function() {
+        // Filter functionality
         const filterButtons = document.querySelectorAll('.filter-btn');
-        const portfolioItems = document.querySelectorAll('.portfolio-item');
+        const productCards = document.querySelectorAll('.product-card-portfolio');
         
         filterButtons.forEach(button => {
             button.addEventListener('click', () => {
                 // Remove active class from all buttons
                 filterButtons.forEach(btn => btn.classList.remove('active'));
-                
                 // Add active class to clicked button
                 button.classList.add('active');
                 
-                // Get filter value
                 const filterValue = button.getAttribute('data-filter');
                 
-                // Filter portfolio items
-                portfolioItems.forEach(item => {
-                    if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
-                        item.style.display = 'block';
+                productCards.forEach(card => {
+                    if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
+                        card.style.display = 'block';
+                        setTimeout(() => {
+                            card.style.opacity = '1';
+                            card.style.transform = 'translateY(0)';
+                        }, 100);
                     } else {
-                        item.style.display = 'none';
+                        card.style.opacity = '0';
+                        card.style.transform = 'translateY(20px)';
+                        setTimeout(() => {
+                            card.style.display = 'none';
+                        }, 300);
                     }
                 });
             });
         });
-
-        // Smooth Scrolling for Navigation Links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                
-                const targetId = this.getAttribute('href');
-                if (targetId === '#') return;
-                
-                const targetElement = document.querySelector(targetId);
-                if (targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 80,
-                        behavior: 'smooth'
-                    });
-                    
-                    // Close mobile menu if open
-                    document.querySelector('nav ul').classList.remove('show');
-                }
-            });
-        });
-
-        // Booking Form Handling - Updated for Formspree
-        const bookingForm = document.getElementById('booking-form');
-        const bookingSuccess = document.getElementById('booking-success');
-        
-        bookingForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Basic form validation
-            const eventType = document.getElementById('event-type').value;
-            const serviceType = document.getElementById('service-type').value;
-            const eventDate = document.getElementById('event-date').value;
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const phone = document.getElementById('phone').value;
-            
-            if (!eventType || !serviceType || !eventDate || !name || !email || !phone) {
-                alert('Please fill in all required fields.');
-                return;
-            }
-            
-            // Create a FormData object from the form
-            const formData = new FormData(bookingForm);
-            
-            // Send the form data using Fetch API
-            fetch(bookingForm.action, {
-                method: 'POST',
-                body: formData,
-                headers: {
-                    'Accept': 'application/json'
-                }
-            })
-            .then(response => {
-                if (response.ok) {
-                    // Hide form and show success message
-                    bookingForm.style.display = 'none';
-                    bookingSuccess.style.display = 'block';
-                    
-                    // You could add code here to send the form data to a server
-                    console.log('Booking submitted:', {
-                        eventType,
-                        serviceType,
-                        eventDate,
-                        name,
-                        email,
-                        phone
-                    });
-                } else {
-                    throw new Error('Form submission failed');
-                }
-            })
-            .catch(error => {
-                console.error('Error:', error);
-                alert('There was a problem with your submission. Please try again or contact us directly.');
-            });
-        });
-
-        // Set minimum date to today for event date picker
-        const today = new Date().toISOString().split('T')[0];
-        document.getElementById('event-date').setAttribute('min', today);
-    </script>
+    });
+</script>
 </body>
 </html>
