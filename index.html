@@ -3,15 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lankah Home Furniture - Premium Furniture & Home Decor</title>
+    <title>Lankah Home Furniture - Premium Furniture & Home Decor in Kenya</title>
+    <meta name="description" content="Lankah Home Furniture - Premium furniture & home decor in Kenya. Transform your space with our living room, bedroom, dining collections and custom pieces in Bungoma.">
+    <meta name="keywords" content="furniture Kenya, home decor, living room furniture, bedroom sets, dining tables, custom furniture Bungoma, sofas Kenya, office furniture">
+    <meta name="author" content="Lankah Home Furniture">
+    
+    <!-- Open Graph tags for social media -->
+    <meta property="og:title" content="Lankah Home Furniture - Premium Furniture & Home Decor">
+    <meta property="og:description" content="Transform your space with premium furniture in Kenya. Living room, bedroom, dining collections and custom pieces.">
+    <meta property="og:image" content="https://res.cloudinary.com/dnxtuowlp/image/upload/v1759467900/Sofa1_clba94.jpg">
+    <meta property="og:url" content="https://lankahfurniture.com">
+    <meta property="og:type" content="website">
+    
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FurnitureStore",
+      "name": "Lankah Home Furniture",
+      "description": "Premium furniture and home decor in Kenya",
+      "url": "https://lankahfurniture.com",
+      "telephone": "+254-707-962-387",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Bungoma",
+        "addressCountry": "Kenya"
+      },
+      "openingHours": "Mo-Fr 09:00-18:00, Sa 10:00-16:00",
+      "priceRange": "$$",
+      "image": [
+        "https://res.cloudinary.com/dnxtuowlp/image/upload/v1759467900/Sofa1_clba94.jpg",
+        "https://res.cloudinary.com/dnxtuowlp/image/upload/v1759467777/Bed3_rhxb9b.jpg",
+        "https://res.cloudinary.com/dnxtuowlp/image/upload/v1759467971/Dining_1_bbmicg.jpg"
+      ]
+    }
+    </script>
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
-            --primary: #8B7355;      /* Warm brown - wood tones */
+            --primary: #8B4513;      /* Rich brown - wood tones */
             --secondary: #D4AF37;    /* Gold - luxury accent */
-            --accent: #A52A2A;       /* Rich red-brown */
-            --light: #F5F5F5;        /* Light background */
-            --dark: #333333;         /* Dark text */
+            --accent: #000000;       /* Black - for contrast */
+            --light: #F5F5DC;        /* Cream - light background */
+            --dark: #2C2C2C;         /* Dark text */
+            --cream: #FFFDD0;        /* Pure cream */
+            --gold: #FFD700;         /* Bright gold */
             --transition: all 0.3s ease;
         }
         
@@ -29,14 +66,37 @@
             overflow-x: hidden;
         }
         
+        /* Top Bar */
+        .top-bar {
+            background: var(--accent);
+            color: var(--secondary);
+            padding: 8px 0;
+            font-size: 0.9rem;
+        }
+        
+        .top-bar-content {
+            display: flex;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        .top-bar-content span {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
         /* Header */
         .header {
             position: fixed;
             width: 100%;
-            background: rgba(255, 255, 255, 0.95);
+            background: rgba(255, 253, 208, 0.95);
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             z-index: 1000;
             padding: 0.8rem 0;
+            top: 40px; /* Account for top bar */
         }
         
         .nav-container {
@@ -57,7 +117,7 @@
         }
         
         .logo img {
-            height: 50px;
+            height: 60px;
             margin-right: 10px;
         }
         
@@ -127,7 +187,7 @@
         .contact-btn:hover {
             background: var(--accent);
             transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(139, 115, 85, 0.3);
+            box-shadow: 0 5px 15px rgba(139, 69, 19, 0.3);
         }
         
         /* Mobile Menu */
@@ -159,6 +219,7 @@
             padding: 0 20px;
             background: url('https://res.cloudinary.com/dnxtuowlp/image/upload/v1759467900/Sofa1_clba94.jpg') no-repeat center center;
             background-size: cover;
+            margin-top: 40px; /* Account for top bar and header */
         }
         
         .hero-overlay {
@@ -167,7 +228,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(to bottom, rgba(139, 115, 85, 0.8), rgba(139, 115, 85, 0.6));
+            background: linear-gradient(to bottom, rgba(139, 69, 19, 0.8), rgba(0, 0, 0, 0.6));
         }
         
         .hero-content {
@@ -217,20 +278,88 @@
         
         .cta-secondary {
             background: transparent;
-            color: white;
+            color: var(--secondary);
             border: 2px solid var(--secondary);
         }
         
         .cta-secondary:hover {
             background: var(--secondary);
-            color: var(--primary);
+            color: var(--accent);
             transform: translateY(-3px);
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
         }
         
+        /* Promotional Banner */
+        .promo-banner {
+            background: linear-gradient(135deg, var(--secondary), var(--gold));
+            color: var(--accent);
+            padding: 1.5rem 0;
+            text-align: center;
+            font-weight: 600;
+        }
+        
+        .promo-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        
+        .promo-content h3 {
+            font-size: 1.3rem;
+            margin: 0;
+        }
+        
+        .promo-content p {
+            margin: 0;
+        }
+        
+        /* Trust Indicators */
+        .trust-indicators {
+            padding: 3rem 2rem;
+            background: var(--cream);
+        }
+        
+        .trust-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .trust-item {
+            text-align: center;
+            padding: 1.5rem;
+            border-radius: 10px;
+            background: var(--cream);
+            border: 2px solid var(--secondary);
+            transition: var(--transition);
+        }
+        
+        .trust-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .trust-item i {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+        
+        .trust-item h4 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+        
         /* Services Banner */
         .services-banner {
-            background: var(--primary);
+            background: var(--accent);
             color: white;
             padding: 3rem 0;
             text-align: center;
@@ -256,18 +385,18 @@
         }
         
         .service-item {
-            background: rgba(255, 255, 255, 0.1);
+            background: rgba(255, 253, 208, 0.1);
             padding: 1.5rem;
             border-radius: 10px;
             transition: var(--transition);
-            border: 1px solid rgba(212, 175, 55, 0.2);
+            border: 1px solid var(--secondary);
             cursor: pointer;
         }
         
         .service-item:hover {
-            background: rgba(255, 255, 255, 0.2);
+            background: rgba(255, 253, 208, 0.2);
             transform: translateY(-5px);
-            border-color: var(--secondary);
+            border-color: var(--gold);
         }
         
         .service-item i {
@@ -280,6 +409,132 @@
         .service-item h3 {
             font-size: 1.2rem;
             margin-bottom: 0.5rem;
+        }
+        
+        /* Featured Products */
+        .featured-products {
+            padding: 4rem 2rem;
+            background: var(--cream);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+            position: relative;
+        }
+        
+        .section-title:after {
+            content: '';
+            position: absolute;
+            width: 80px;
+            height: 4px;
+            background-color: var(--secondary);
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .section-subtitle {
+            text-align: center;
+            max-width: 800px;
+            margin: 2rem auto 0;
+            color: var(--dark);
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+        
+        .featured-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .featured-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            transition: var(--transition);
+            position: relative;
+            border: 2px solid var(--primary);
+        }
+        
+        .featured-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(139, 69, 19, 0.2);
+        }
+        
+        .product-badge {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background: var(--secondary);
+            color: var(--primary);
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            z-index: 2;
+        }
+        
+        .featured-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .featured-info {
+            padding: 1.5rem;
+        }
+        
+        .featured-info h3 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+        
+        .price {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+        
+        .rating {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            margin-bottom: 1rem;
+            color: var(--secondary);
+        }
+        
+        .rating span {
+            color: var(--dark);
+            font-size: 0.9rem;
+        }
+        
+        .add-to-cart {
+            width: 100%;
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 12px;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .add-to-cart:hover {
+            background: var(--accent);
         }
         
         /* Product Category Sections */
@@ -360,7 +615,7 @@
             bottom: 0;
             left: 0;
             right: 0;
-            background: rgba(139, 115, 85, 0.8);
+            background: rgba(139, 69, 19, 0.8);
             color: white;
             padding: 1rem;
             text-align: center;
@@ -412,205 +667,6 @@
             background-color: var(--secondary);
         }
         
-        /* Product Portfolio Section */
-        .product-portfolio {
-            padding: 6rem 2rem;
-            background-color: var(--light);
-        }
-        
-        .portfolio-container {
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-        
-        .portfolio-header {
-            text-align: center;
-            margin-bottom: 4rem;
-        }
-        
-        .portfolio-title {
-            font-size: 2.8rem;
-            color: var(--primary);
-            margin-bottom: 1rem;
-            position: relative;
-        }
-        
-        .portfolio-title:after {
-            content: '';
-            position: absolute;
-            width: 100px;
-            height: 4px;
-            background-color: var(--secondary);
-            bottom: -15px;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-        
-        .portfolio-description {
-            max-width: 800px;
-            margin: 2rem auto 0;
-            color: var(--dark);
-            font-size: 1.1rem;
-            line-height: 1.6;
-        }
-        
-        /* Product Filter */
-        .product-filter {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 1rem;
-            margin-bottom: 3rem;
-        }
-        
-        .filter-btn {
-            background: rgba(212, 175, 55, 0.1);
-            border: 1px solid rgba(212, 175, 55, 0.3);
-            color: var(--dark);
-            padding: 0.7rem 1.5rem;
-            border-radius: 30px;
-            cursor: pointer;
-            transition: var(--transition);
-            font-weight: 500;
-        }
-        
-        .filter-btn.active,
-        .filter-btn:hover {
-            background: var(--secondary);
-            color: var(--primary);
-            transform: translateY(-2px);
-        }
-        
-        /* Product Cards Layout */
-        .products-grid-portfolio {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-        
-        .product-card-portfolio {
-            background: white;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            transition: var(--transition);
-            border: 1px solid rgba(212, 175, 55, 0.1);
-        }
-        
-        .product-card-portfolio:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(139, 115, 85, 0.2);
-            border-color: var(--secondary);
-        }
-        
-        .product-media {
-            position: relative;
-            height: 250px;
-            overflow: hidden;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: #f9f9f9;
-        }
-        
-        .product-media img {
-            max-width: 100%;
-            max-height: 100%;
-            width: auto;
-            height: auto;
-            object-fit: contain;
-            transition: var(--transition);
-        }
-        
-        .product-card-portfolio:hover .product-media img {
-            transform: scale(1.05);
-        }
-        
-        .product-tag {
-            position: absolute;
-            top: 1rem;
-            right: 1rem;
-            background: rgba(139, 115, 85, 0.9);
-            color: white;
-            padding: 0.3rem 0.8rem;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            display: flex;
-            align-items: center;
-            gap: 0.3rem;
-        }
-        
-        .product-info {
-            padding: 1.5rem;
-        }
-        
-        .product-category {
-            color: var(--secondary);
-            font-size: 0.9rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 0.5rem;
-        }
-        
-        .product-title {
-            font-size: 1.4rem;
-            margin-bottom: 1rem;
-            color: var(--primary);
-        }
-        
-        .product-price {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            color: var(--dark);
-            margin-bottom: 1rem;
-            font-size: 1.1rem;
-            font-weight: bold;
-        }
-        
-        .product-price i {
-            color: var(--secondary);
-        }
-        
-        .product-description {
-            color: var(--dark);
-            font-size: 0.95rem;
-            line-height: 1.5;
-            margin-bottom: 1.5rem;
-        }
-        
-        .product-features {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            margin-bottom: 1.5rem;
-        }
-        
-        .feature-tag {
-            background: rgba(212, 175, 55, 0.1);
-            color: var(--secondary);
-            padding: 0.3rem 0.8rem;
-            border-radius: 15px;
-            font-size: 0.8rem;
-            border: 1px solid rgba(212, 175, 55, 0.2);
-        }
-        
-        .product-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            color: var(--secondary);
-            text-decoration: none;
-            font-weight: 600;
-            transition: var(--transition);
-        }
-        
-        .product-link:hover {
-            gap: 0.8rem;
-            color: var(--primary);
-        }
-        
         /* Testimonials Section */
         .testimonials-section {
             padding: 6rem 2rem;
@@ -629,13 +685,12 @@
             padding: 2rem;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
             transition: var(--transition);
-            border: 1px solid rgba(212, 175, 55, 0.1);
+            border: 2px solid var(--secondary);
         }
         
         .testimonial-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 15px 40px rgba(139, 115, 85, 0.2);
-            border-color: var(--secondary);
+            box-shadow: 0 15px 40px rgba(139, 69, 19, 0.2);
         }
         
         .testimonial-content {
@@ -681,11 +736,6 @@
             background-color: white;
         }
         
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        
         .blog-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -703,7 +753,7 @@
         
         .blog-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(139, 115, 85, 0.2);
+            box-shadow: 0 15px 30px rgba(139, 69, 19, 0.2);
             border-color: var(--secondary);
         }
         
@@ -731,7 +781,7 @@
         /* Contact Section */
         .contact {
             padding: 6rem 2rem;
-            background-color: var(--light);
+            background-color: var(--cream);
         }
         
         .contact-content {
@@ -824,12 +874,12 @@
         .submit-btn:hover {
             background: var(--accent);
             transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(139, 115, 85, 0.3);
+            box-shadow: 0 5px 15px rgba(139, 69, 19, 0.3);
         }
         
         /* Footer */
         .footer {
-            background: var(--primary);
+            background: var(--accent);
             color: white;
             padding: 3rem 0 1rem;
         }
@@ -918,8 +968,222 @@
             transform: translateY(0);
         }
         
+        /* Floating WhatsApp */
+        .floating-whatsapp {
+            position: fixed;
+            bottom: 100px;
+            right: 20px;
+            z-index: 1000;
+        }
+        
+        .whatsapp-float {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: #25D366;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+            transition: var(--transition);
+        }
+        
+        .whatsapp-float:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+        }
+        
+        /* Chat Bot Styles */
+        .chat-bot {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+        
+        .chat-toggle {
+            width: 60px;
+            height: 60px;
+            background: var(--secondary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--accent);
+            font-size: 24px;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            transition: var(--transition);
+            border: none;
+        }
+        
+        .chat-toggle:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
+        
+        .chat-window {
+            position: absolute;
+            bottom: 70px;
+            right: 0;
+            width: 320px;
+            height: 450px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            display: none;
+            flex-direction: column;
+            overflow: hidden;
+            transition: var(--transition);
+        }
+        
+        .chat-window.active {
+            display: flex;
+        }
+        
+        .chat-header {
+            background: var(--primary);
+            color: white;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .chat-header h3 {
+            margin: 0;
+            font-size: 1.2rem;
+        }
+        
+        .close-chat {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 20px;
+            cursor: pointer;
+        }
+        
+        .chat-messages {
+            flex: 1;
+            padding: 15px;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        
+        .message {
+            max-width: 80%;
+            padding: 10px 15px;
+            border-radius: 18px;
+            font-size: 14px;
+            line-height: 1.4;
+        }
+        
+        .bot-message {
+            background: #f0f0f0;
+            align-self: flex-start;
+            border-bottom-left-radius: 5px;
+        }
+        
+        .user-message {
+            background: var(--secondary);
+            color: var(--primary);
+            align-self: flex-end;
+            border-bottom-right-radius: 5px;
+        }
+        
+        .chat-input {
+            display: flex;
+            padding: 10px;
+            border-top: 1px solid #eee;
+        }
+        
+        .chat-input input {
+            flex: 1;
+            padding: 10px 15px;
+            border: 1px solid #ddd;
+            border-radius: 30px;
+            outline: none;
+        }
+        
+        .send-btn {
+            background: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            margin-left: 10px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+        
+        .send-btn:hover {
+            background: var(--accent);
+        }
+        
+        .quick-options {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            padding: 10px 15px;
+            border-top: 1px solid #eee;
+        }
+        
+        .quick-option {
+            background: rgba(139, 69, 19, 0.1);
+            border: 1px solid rgba(139, 69, 19, 0.2);
+            border-radius: 20px;
+            padding: 6px 12px;
+            font-size: 12px;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .quick-option:hover {
+            background: var(--primary);
+            color: white;
+        }
+        
+        /* Loading Animation */
+        .loading-spinner {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid rgba(255,255,255,.3);
+            border-radius: 50%;
+            border-top-color: white;
+            animation: spin 1s ease-in-out infinite;
+        }
+        
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        
+        /* Image Lazy Loading */
+        img[data-src] {
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        
+        img.loaded {
+            opacity: 1;
+        }
+        
         /* Responsive */
         @media screen and (max-width: 768px) {
+            .top-bar-content {
+                flex-direction: column;
+                gap: 5px;
+                text-align: center;
+            }
+            
             .nav-menu {
                 display: none;
                 position: absolute;
@@ -978,30 +1242,31 @@
                 height: 300px;
             }
             
-            .products-grid-portfolio {
+            .testimonials-grid {
                 grid-template-columns: 1fr;
             }
             
-            .product-filter {
+            .chat-window {
+                width: 280px;
+                height: 400px;
+            }
+            
+            .promo-content {
+                flex-direction: column;
                 gap: 0.5rem;
             }
             
-            .filter-btn {
-                padding: 0.5rem 1rem;
-                font-size: 0.9rem;
-            }
-            
-            .testimonials-grid {
-                grid-template-columns: 1fr;
+            .logo img {
+                height: 50px;
             }
         }
 
         @media screen and (max-width: 480px) {
-            .product-portfolio {
+            .product-category {
                 padding: 4rem 1rem;
             }
             
-            .portfolio-title {
+            .category-title {
                 font-size: 2.2rem;
             }
             
@@ -1013,17 +1278,39 @@
                 padding: 0.5rem;
                 font-size: 0.9rem;
             }
+            
+            .chat-window {
+                width: 260px;
+                height: 380px;
+            }
+            
+            .featured-products {
+                padding: 3rem 1rem;
+            }
+            
+            .logo img {
+                height: 45px;
+            }
         }
     </style>
 </head>
 <body>
 
+<!-- Top Bar -->
+<div class="top-bar">
+    <div class="top-bar-content">
+        <span><i class="fas fa-phone"></i> +254 707 962 387</span>
+        <span><i class="fas fa-envelope"></i> info@lankahfurniture.com</span>
+        <span>Free Delivery within Bungoma</span>
+    </div>
+</div>
+
 <!-- Header -->
 <header class="header">
     <nav class="nav-container">
         <div class="logo">
-            <!-- Furniture logo placeholder -->
-            <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTAiIGhlaWdodD0iNTAiIHZpZXdCb3g9IjAgMCA1MCA1MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjUwIiBoZWlnaHQ9IjUwIiBmaWxsPSIjOEI3MzU1Ii8+CjxwYXRoIGQ9Ik0xMi41IDI1TDM3LjUgMjUiIHN0cm9rZT0iI0Q0QUYzNyIgc3Ryb2tlLXdpZHRoPSIyIi8+CjxwYXRoIGQ9Ik0yNSAxMi41TDI1IDM3LjUiIHN0cm9rZT0iI0Q0QUYzNyIgc3Ryb2tlLXdpZHRoPSIyIi8+CjxyZWN0IHg9IjE1IiB5PSIxNSIgd2lkdGg9IjIwIiBoZWlnaHQ9IjIwIiBzdHJva2U9IiNENEFGMzciIHN0cm9rZS13aWR0aD0iMiIvPgo8L3N2Zz4K" alt="Lankah Home Furniture Logo">
+            <!-- Updated Lankah Logo -->
+            <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1760265505/Lankah_logo_sp6xeh.jpg" alt="Lankah Home Furniture Logo">
             <div class="logo-text">
                 <span class="company-name">LANKAH HOME FURNITURE</span>
                 <span class="company-tagline">PREMIUM FURNITURE & HOME DECOR</span>
@@ -1032,7 +1319,7 @@
         <ul class="nav-menu">
             <li><a href="#home">Home</a></li>
             <li><a href="#services">Collections</a></li>
-            <li><a href="#product-portfolio">Products</a></li>
+            <li><a href="#featured">Featured</a></li>
             <li><a href="#testimonials">Testimonials</a></li>
             <li><a href="#blog">Inspiration</a></li>
             <li><a href="#contact">Contact</a></li>
@@ -1049,14 +1336,43 @@
         <h1>Transform Your Space With Elegance</h1>
         <p>Lankah Home Furniture brings you premium furniture and home decor that combines style, comfort, and exceptional craftsmanship.</p>
         <div class="cta-buttons">
-            <a href="#product-portfolio" class="cta-btn cta-primary">Explore Collections</a>
+            <a href="#featured" class="cta-btn cta-primary">Explore Collections</a>
             <a href="#contact" class="cta-btn cta-secondary">Book Consultation</a>
         </div>
     </div>
 </section>
 
+<!-- Promotional Banner -->
+<section class="promo-banner">
+    <div class="promo-content">
+        <h3>🎉 Limited Time Offer!</h3>
+        <p>Get 15% off on all living room sets this month. Free delivery within Bungoma.</p>
+        <a href="#contact" class="cta-btn cta-primary">Claim Offer</a>
+    </div>
+</section>
+
+<!-- Trust Indicators -->
+<section class="trust-indicators">
+    <div class="container">
+        <div class="trust-grid">
+           
+         
+            <div class="trust-item">
+                <i class="fas fa-tools"></i>
+                <h4>Free Assembly</h4>
+                <p>Professional setup</p>
+            </div>
+            <div class="trust-item">
+                <i class="fas fa-credit-card"></i>
+                <h4>Flexible Payments</h4>
+                <p>Installment plans available</p>
+            </div>
+        </div>
+    </div>
+</section>
+
 <!-- Services Banner -->
-<section class="services-banner">
+<section id="services" class="services-banner">
     <div class="services-banner-content">
         <h2>Our Furniture Collections</h2>
         <div class="services-grid-banner">
@@ -1092,6 +1408,67 @@
     </div>
 </section>
 
+<!-- Featured Products -->
+<section id="featured" class="featured-products">
+    <div class="container">
+        <h2 class="section-title">Best Selling Products</h2>
+        <p class="section-subtitle">Discover our most popular furniture pieces loved by customers across Kenya</p>
+        <div class="featured-grid">
+            <div class="featured-card">
+                <div class="product-badge">Bestseller</div>
+                <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1760256979/Sofa1_v8gzug.jpg" alt="Premium Leather Sofa">
+                <div class="featured-info">
+                    <h3>Premium Leather Sofa Set</h3>
+                    <div class="price">KSh 45,000</div>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <span>(24 reviews)</span>
+                    </div>
+                    <button class="add-to-cart">Inquire Now</button>
+                </div>
+            </div>
+            <div class="featured-card">
+                <div class="product-badge">Popular</div>
+                <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1760255484/bed1_oaqp3c.jpg" alt="Queen Size Bed Frame">
+                <div class="featured-info">
+                    <h3>Queen Size Bed Frame</h3>
+                    <div class="price">KSh 32,500</div>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>(18 reviews)</span>
+                    </div>
+                    <button class="add-to-cart">Inquire Now</button>
+                </div>
+            </div>
+            <div class="featured-card">
+                <div class="product-badge">New</div>
+                <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1759467971/Dining_1_bbmicg.jpg" alt="Extendable Dining Table">
+                <div class="featured-info">
+                    <h3>Extendable Dining Table</h3>
+                    <div class="price">KSh 28,000</div>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <span>(12 reviews)</span>
+                    </div>
+                    <button class="add-to-cart">Inquire Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 <!-- Living Room Section -->
 <section id="living-room" class="product-category">
     <div class="container">
@@ -1102,24 +1479,76 @@
         <div class="slideshow-container animate-on-scroll">
             <div class="slides">
                 <div class="slide">
-                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1759467900/Sofa1_clba94.jpg" alt="Living Room Sofa 1">
-                    <div class="slide-caption">Modern Living Room Sofa</div>
+                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1760256979/Sofa1_v8gzug.jpg" alt="Living Room Sofa 1">
+                    <div class="slide-caption"></div>
                 </div>
                 <div class="slide">
-                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1759467901/SOFA2_om87jm.jpg" alt="Living Room Sofa 2">
-                    <div class="slide-caption">Luxury Sectional Sofa</div>
+                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1760256979/Sofa2_hr8no7.jpg" alt="Living Room Sofa 2">
+                    <div class="slide-caption"></div>
                 </div>
                 <div class="slide">
-                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1759467902/Sofa3_2_jsxzdy.jpg" alt="Living Room Sofa 3">
-                    <div class="slide-caption">Contemporary Living Space</div>
+                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1760256980/sofa3_ttadpu.jpg" alt="Living Room Sofa 3">
+                    <div class="slide-caption"></div>
                 </div>
                 <div class="slide">
-                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1759467903/SOFA3_gfxemi.jpg" alt="Living Room Sofa 4">
-                    <div class="slide-caption">Elegant Lounge Setting</div>
+                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1760256981/sofa4_xbkqre.jpg" alt="Living Room Sofa 4">
+                    <div class="slide-caption"></div>
                 </div>
                 <div class="slide">
-                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1759467903/sofa4_iadvyh.jpg" alt="Living Room Sofa 5">
-                    <div class="slide-caption">Premium Sofa Collection</div>
+                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1760256982/sofa5_k1bvtc.jpg" alt="Living Room Sofa 5">
+                    <div class="slide-caption"></div>
+                </div>
+                <div class="slide">
+                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1760256983/sofa6_xmzuv8.jpg" alt="Living Room Sofa 6">
+                    <div class="slide-caption"></div>
+                </div>
+                <div class="slide">
+                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1760256985/sofa7_g0afnk.jpg" alt="Living Room Sofa 7">
+                    <div class="slide-caption"></div>
+                </div>
+                <div class="slide">
+                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1760256986/sofa8_sdgvvw.jpg" alt="Living Room Sofa 8">
+                    <div class="slide-caption"></div>
+                </div>
+                <div class="slide">
+                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1760256988/sofa9_rhe84h.jpg" alt="Living Room Sofa 9">
+                    <div class="slide-caption"></div>
+                </div>
+                <div class="slide">
+                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1760256989/sofa10_cyvn8i.jpg" alt="Living Room Sofa 10">
+                    <div class="slide-caption"></div>
+                </div>
+                <div class="slide">
+                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1760256992/Sofa11_gnulfy.jpg" alt="Living Room Sofa 11">
+                    <div class="slide-caption"></div>
+                </div>
+                <div class="slide">
+                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1760256993/Sofa12_zfdf4i.jpg" alt="Living Room Sofa 12">
+                    <div class="slide-caption"></div>
+                </div>
+                <div class="slide">
+                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1760256995/sofa13_x18ho2.jpg" alt="Living Room Sofa 13">
+                    <div class="slide-caption"></div>
+                </div>
+                <div class="slide">
+                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1760256997/sofa14_nyacq2.jpg" alt="Living Room Sofa 14">
+                    <div class="slide-caption"></div>
+                </div>
+                <div class="slide">
+                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1760256998/sofa15_oyu124.jpg" alt="Living Room Sofa 15">
+                    <div class="slide-caption"></div>
+                </div>
+                <div class="slide">
+                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1760257001/sofa16_ytqofi.jpg" alt="Living Room Sofa 16">
+                    <div class="slide-caption"></div>
+                </div>
+                <div class="slide">
+                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1760257003/sofa17_rwmb21.jpg" alt="Living Room Sofa 17">
+                    <div class="slide-caption"></div>
+                </div>
+                <div class="slide">
+                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1760257005/sofa18_xqqxvd.jpg" alt="Living Room Sofa 18">
+                    <div class="slide-caption"></div>
                 </div>
             </div>
             <a class="prev">&#10094;</a>
@@ -1145,20 +1574,48 @@
         <div class="slideshow-container animate-on-scroll">
             <div class="slides">
                 <div class="slide">
-                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1759467778/bed1_tm5ldy.jpg" alt="Bedroom Design 1">
-                    <div class="slide-caption">Luxury Master Bedroom</div>
+                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1760255484/bed1_oaqp3c.jpg" alt="Bedroom Design 1">
+                    <div class="slide-caption"></div>
                 </div>
                 <div class="slide">
-                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1759467776/Bed_gtsv2m.jpg" alt="Bedroom Design 2">
-                    <div class="slide-caption">Modern Bedroom Suite</div>
+                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1760255484/bed2_ezetzw.jpg" alt="Bedroom Design 2">
+                    <div class="slide-caption"></div>
                 </div>
                 <div class="slide">
-                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1759467777/Bed3_rhxb9b.jpg" alt="Bedroom Design 3">
-                    <div class="slide-caption">Cozy Bedroom Retreat</div>
+                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1760255485/bed3_h780xr.jpg" alt="Bedroom Design 3">
+                    <div class="slide-caption"></div>
                 </div>
                 <div class="slide">
-                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1759467776/527788918_1180423707437306_795955402191206739_n_cncfv3.jpg" alt="Bedroom Design 4">
-                    <div class="slide-caption">Elegant Bedroom Set</div>
+                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1760255486/bed4_jkborn.jpg" alt="Bedroom Design 4">
+                    <div class="slide-caption"></div>
+                </div>
+                <div class="slide">
+                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1760255487/bed5_olenab.jpg" alt="Bedroom Design 5">
+                    <div class="slide-caption"></div>
+                </div>
+                <div class="slide">
+                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1760255486/bed6_actiq5.jpg" alt="Bedroom Design 6">
+                    <div class="slide-caption"></div>
+                </div>
+                <div class="slide">
+                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1760255487/bed7_bxvckk.jpg" alt="Bedroom Design 7">
+                    <div class="slide-caption"></div>
+                </div>
+                <div class="slide">
+                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1760255489/bed8_n21isb.jpg" alt="Bedroom Design 8">
+                    <div class="slide-caption"></div>
+                </div>
+                <div class="slide">
+                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1760255490/bed9_t7bdie.jpg" alt="Bedroom Design 9">
+                    <div class="slide-caption"></div>
+                </div>
+                <div class="slide">
+                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1760255492/bed10_foni6b.jpg" alt="Bedroom Design 10">
+                    <div class="slide-caption"></div>
+                </div>
+                <div class="slide">
+                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1760255494/bed11_v1rpjt.jpg" alt="Bedroom Design 11">
+                    <div class="slide-caption"></div>
                 </div>
             </div>
             <a class="prev">&#10094;</a>
@@ -1177,30 +1634,62 @@
 <section id="dining" class="product-category">
     <div class="container">
         <div class="category-header">
-            <h2 class="category-title animate-on-scroll">Dining Collection</h2>
+            <h2 class="category-title animate-on-scroll">Dining Collection & Table </h2>
             <p class="category-description animate-on-scroll">Elevate your dining experience with our exquisite dining furniture. From formal dining sets to casual breakfast nooks, create the perfect space for meals and gatherings.</p>
         </div>
         <div class="slideshow-container animate-on-scroll">
             <div class="slides">
                 <div class="slide">
                     <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1759467971/Dining_1_bbmicg.jpg" alt="Dining Room Design 1">
-                    <div class="slide-caption">Formal Dining Room Set</div>
+                    <div class="slide-caption"></div>
                 </div>
                 <div class="slide">
                     <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1759467972/Dining_gefkje.jpg" alt="Dining Room Design 2">
-                    <div class="slide-caption">Modern Dining Area</div>
+                    <div class="slide-caption"></div>
                 </div>
                 <div class="slide">
                     <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1759468321/Dining_2_ewppvz.jpg" alt="Dining Room Design 3">
-                    <div class="slide-caption">Elegant Dining Table</div>
+                    <div class="slide-caption"></div>
                 </div>
                 <div class="slide">
                     <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1759468322/dining_5_yej2hp.jpg" alt="Dining Room Design 4">
-                    <div class="slide-caption">Contemporary Dining Space</div>
+                    <div class="slide-caption"></div>
                 </div>
                 <div class="slide">
                     <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1759468323/dinining_3_tqyxih.jpg" alt="Dining Room Design 5">
-                    <div class="slide-caption">Premium Dining Collection</div>
+                    <div class="slide-caption"></div>
+                </div>
+                <div class="slide">
+                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1760254595/dining1_zbtqdd.jpg" alt="Dining Room Design 6">
+                    <div class="slide-caption"></div>
+                </div>
+                <div class="slide">
+                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1760254595/dining2_kq6kh7.jpg" alt="Dining Room Design 7">
+                    <div class="slide-caption"></div>
+                </div>
+                <div class="slide">
+                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1760254595/dining3_fglnci.jpg" alt="Dining Room Design 8">
+                    <div class="slide-caption"></div>
+                </div>
+                <div class="slide">
+                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1760254595/dining4_zoecrz.jpg" alt="Dining Room Design 9">
+                    <div class="slide-caption"></div>
+                </div>
+                <div class="slide">
+                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1760254595/dining5_okhgel.jpg" alt="Dining Room Design 10">
+                    <div class="slide-caption"></div>
+                </div>
+                <div class="slide">
+                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1760254596/dining7_mpjbel.jpg" alt="Dining Room Design 11">
+                    <div class="slide-caption"></div>
+                </div>
+                <div class="slide">
+                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1760254594/dining8_au9gyz.jpg" alt="Dining Room Design 12">
+                    <div class="slide-caption"></div>
+                </div>
+                <div class="slide">
+                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1760254595/dining5_okhgel.jpg" alt="Dining Room Design 13">
+                    <div class="slide-caption"></div>
                 </div>
             </div>
             <a class="prev">&#10094;</a>
@@ -1216,171 +1705,158 @@
     </div>
 </section>
 
-<!-- Product Portfolio Section -->
-<section id="product-portfolio" class="product-portfolio">
-    <div class="portfolio-container">
-        <div class="portfolio-header">
-            <h2 class="portfolio-title animate-on-scroll">Featured Products</h2>
-            <p class="portfolio-description animate-on-scroll">Discover our curated selection of premium furniture pieces. Each item is crafted with attention to detail, quality materials, and timeless design.</p>
+<!-- TV Stand Section -->
+<section id="tv-stand" class="product-category">
+    <div class="container">
+        <div class="category-header">
+            <h2 class="category-title animate-on-scroll">TV STAND </h2>
+            <p class="category-description animate-on-scroll">Complete your entertainment area with our stylish and functional TV stands. Designed to complement your living space while providing ample storage for media equipment.</p>
         </div>
-        
-        <div class="product-filter">
-            <button class="filter-btn active" data-filter="all">All Products</button>
-            <button class="filter-btn" data-filter="sofas">Sofas</button>
-            <button class="filter-btn" data-filter="tables">Tables</button>
-            <button class="filter-btn" data-filter="beds">Beds</button>
-            <button class="filter-btn" data-filter="decor">Home Decor</button>
+        <div class="slideshow-container animate-on-scroll">
+            <div class="slides">
+                <div class="slide">
+                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1760260363/Tv_1_cz3rlv.jpg" alt="TV Stand 1">
+                    <div class="slide-caption"></div>
+                </div>
+                <div class="slide">
+                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1760260364/TV2_fzfslt.jpg" alt="TV Stand 2">
+                    <div class="slide-caption"></div>
+                </div>
+                <div class="slide">
+                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1760260364/TV3_yumwi5.jpg" alt="TV Stand 3">
+                    <div class="slide-caption"></div>
+                </div>
+                <div class="slide">
+                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1760260365/TV4_gywupk.jpg" alt="TV Stand 4">
+                    <div class="slide-caption"></div>
+                </div>
+                <div class="slide">
+                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1760260367/TV5_ekoozu.jpg" alt="TV Stand 5">
+                    <div class="slide-caption"></div>
+                </div>
+                <div class="slide">
+                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1760260370/TV6_yynq8r.jpg" alt="TV Stand 6">
+                    <div class="slide-caption"></div>
+                </div>
+                <div class="slide">
+                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1760260371/TV7_uhyksp.jpg" alt="TV Stand 7">
+                    <div class="slide-caption"></div>
+                </div>
+                <div class="slide">
+                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1760260371/TV8_ychvys.jpg" alt="TV Stand 8">
+                    <div class="slide-caption"></div>
+                </div>
+                <div class="slide">
+                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1760260374/TV9_eihr7x.jpg" alt="TV Stand 9">
+                    <div class="slide-caption"></div>
+                </div>
+                <div class="slide">
+                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1760260376/TV10_uvdtjo.jpg" alt="TV Stand 10">
+                    <div class="slide-caption"></div>
+                </div>
+            </div>
+            <a class="prev">&#10094;</a>
+            <a class="next">&#10095;</a>
+            <div class="dots-container">
+                <span class="dot active" data-slide="0"></span>
+                <span class="dot" data-slide="1"></span>
+                <span class="dot" data-slide="2"></span>
+                <span class="dot" data-slide="3"></span>
+                <span class="dot" data-slide="4"></span>
+            </div>
         </div>
-        
-        <div class="products-grid-portfolio">
-            <!-- Product 1 -->
-            <div class="product-card-portfolio animate-on-scroll" data-category="sofas">
-                <div class="product-media">
-                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1759467900/Sofa1_clba94.jpg" alt="Luxury Sofa">
-                    <div class="product-tag">
-                        <i class="fas fa-tag"></i> Best Seller
-                    </div>
+    </div>
+</section>
+
+<!-- Home Decor -->
+<section id="tv-stand" class="product-category">
+    <div class="container">
+        <div class="category-header">
+            <h2 class="category-title animate-on-scroll">Home Decor </h2>
+            <p class="category-description animate-on-scroll">Complete your entertainment area with our stylish and functional TV stands. Designed to complement your living space while providing ample storage for media equipment.</p>
+        </div>
+        <div class="slideshow-container animate-on-scroll">
+            <div class="slides">
+                <div class="slide">
+                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1760351800/decor1_idv0om.jpg" alt="TV Stand 1">
+                    <div class="slide-caption"></div>
                 </div>
-                <div class="product-info">
-                    <div class="product-category">Sofas</div>
-                    <h3 class="product-title">Manhattan Luxury Sofa</h3>
-                    <div class="product-price">
-                        <i class="fas fa-tag"></i>
-                        <span>KSh 249,999</span>
-                    </div>
-                    <p class="product-description">Premium leather sofa with solid wood frame and high-density foam cushions for ultimate comfort and durability.</p>
-                    <div class="product-features">
-                        <span class="feature-tag">Premium Leather</span>
-                        <span class="feature-tag">Solid Wood Frame</span>
-                        <span class="feature-tag">5-Year Warranty</span>
-                    </div>
-                    <a href="#contact" class="product-link">Inquire Now <i class="fas fa-arrow-right"></i></a>
+                <div class="slide">
+                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1760351800/decor2_b20oww.jpg" alt="TV Stand 2">
+                    <div class="slide-caption"></div>
                 </div>
-            </div>
+                <div class="slide">
+                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1760351801/decor3_zomgfg.jpg" alt="TV Stand 3">
+                    <div class="slide-caption"></div>
+                </div>
+                <div class="slide">
+                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1760351801/decor4_utgsgh.jpg" alt="TV Stand 4">
+                    <div class="slide-caption"></div>
+                </div>
+                <div class="slide">
+                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1760351802/decor5_rnasoy.jpg" alt="TV Stand 5">
+                    <div class="slide-caption"></div>
+                </div>
             
-            <!-- Product 2 -->
-            <div class="product-card-portfolio animate-on-scroll" data-category="tables">
-                <div class="product-media">
-                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1759468321/Dining_2_ewppvz.jpg" alt="Dining Table">
-                    <div class="product-tag">
-                        <i class="fas fa-tag"></i> New Arrival
-                    </div>
-                </div>
-                <div class="product-info">
-                    <div class="product-category">Tables</div>
-                    <h3 class="product-title">Oak Extension Dining Table</h3>
-                    <div class="product-price">
-                        <i class="fas fa-tag"></i>
-                        <span>KSh 189,999</span>
-                    </div>
-                    <p class="product-description">Solid oak dining table with extension leaves, seating up to 10 people. Perfect for family gatherings and entertaining.</p>
-                    <div class="product-features">
-                        <span class="feature-tag">Solid Oak</span>
-                        <span class="feature-tag">Extendable</span>
-                        <span class="feature-tag">Seats 8-10</span>
-                    </div>
-                    <a href="#contact" class="product-link">Inquire Now <i class="fas fa-arrow-right"></i></a>
-                </div>
+                
+                
             </div>
-            
-            <!-- Product 3 -->
-            <div class="product-card-portfolio animate-on-scroll" data-category="beds">
-                <div class="product-media">
-                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1759467778/bed1_tm5ldy.jpg" alt="King Size Bed">
-                    <div class="product-tag">
-                        <i class="fas fa-tag"></i> Premium
-                    </div>
-                </div>
-                <div class="product-info">
-                    <div class="product-category">Beds</div>
-                    <h3 class="product-title">Canopy King Bed Frame</h3>
-                    <div class="product-price">
-                        <i class="fas fa-tag"></i>
-                        <span>KSh 320,000</span>
-                    </div>
-                    <p class="product-description">Elegant canopy bed frame in rich mahogany finish with upholstered headboard and integrated lighting.</p>
-                    <div class="product-features">
-                        <span class="feature-tag">Solid Mahogany</span>
-                        <span class="feature-tag">Upholstered Headboard</span>
-                        <span class="feature-tag">Integrated Lighting</span>
-                    </div>
-                    <a href="#contact" class="product-link">Inquire Now <i class="fas fa-arrow-right"></i></a>
-                </div>
+            <a class="prev">&#10094;</a>
+            <a class="next">&#10095;</a>
+            <div class="dots-container">
+                <span class="dot active" data-slide="0"></span>
+                <span class="dot" data-slide="1"></span>
+                <span class="dot" data-slide="2"></span>
+                <span class="dot" data-slide="3"></span>
+                <span class="dot" data-slide="4"></span>
             </div>
-            
-            <!-- Product 4 -->
-            <div class="product-card-portfolio animate-on-scroll" data-category="decor">
-                <div class="product-media">
-                    <img src="https://images.unsplash.com/photo-1582582621959-48d27397dc69?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80" alt="Home Decor">
-                    <div class="product-tag">
-                        <i class="fas fa-tag"></i> Handcrafted
-                    </div>
+        </div>
+    </div>
+</section>
+<!-- Cabinet & Drawers Section -->
+<section id="tv-stand" class="product-category">
+    <div class="container">
+        <div class="category-header">
+            <h2 class="category-title animate-on-scroll">Cabinet & Drawers </h2>
+            <p class="category-description animate-on-scroll">Complete your entertainment area with our stylish and functional TV stands. Designed to complement your living space while providing ample storage for media equipment.</p>
+        </div>
+        <div class="slideshow-container animate-on-scroll">
+            <div class="slides">
+                <div class="slide">
+                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1760351595/cabinet1_rex5xh.jpg" alt="TV Stand 1">
+                    <div class="slide-caption"></div>
                 </div>
-                <div class="product-info">
-                    <div class="product-category">Home Decor</div>
-                    <h3 class="product-title">Artisan Wall Art Collection</h3>
-                    <div class="product-price">
-                        <i class="fas fa-tag"></i>
-                        <span>KSh 45,000</span>
-                    </div>
-                    <p class="product-description">Handcrafted wall art pieces that add character and elegance to any room. Each piece is unique and signed by the artist.</p>
-                    <div class="product-features">
-                        <span class="feature-tag">Handcrafted</span>
-                        <span class="feature-tag">Signed Artwork</span>
-                        <span class="feature-tag">Premium Materials</span>
-                    </div>
-                    <a href="#contact" class="product-link">Inquire Now <i class="fas fa-arrow-right"></i></a>
+                <div class="slide">
+                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1760351595/cabinet2_ewg0bw.jpg" alt="TV Stand 2">
+                    <div class="slide-caption"></div>
                 </div>
+                <div class="slide">
+                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1760351595/cabinet3_q0rbys.jpg" alt="TV Stand 3">
+                    <div class="slide-caption"></div>
+                </div>
+                <div class="slide">
+                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1760351595/cabinet4_jccehj.jpg" alt="TV Stand 4">
+                    <div class="slide-caption"></div>
+                </div>
+                <div class="slide">
+                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1760351595/cabinet6_wdprnl.jpg" alt="TV Stand 5">
+                    <div class="slide-caption"></div>
+                </div>
+                <div class="slide">
+                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1760351596/cabinet7_nemr5o.jpg" alt="TV Stand 6">
+                    <div class="slide-caption"></div>
+                </div>
+                
+                
             </div>
-            
-            <!-- Product 5 -->
-            <div class="product-card-portfolio animate-on-scroll" data-category="tables">
-                <div class="product-media">
-                    <img src="https://images.unsplash.com/photo-1533090368676-1fd25485db88?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80" alt="Coffee Table">
-                    <div class="product-tag">
-                        <i class="fas fa-tag"></i> Modern
-                    </div>
-                </div>
-                <div class="product-info">
-                    <div class="product-category">Tables</div>
-                    <h3 class="product-title">Geometric Coffee Table</h3>
-                    <div class="product-price">
-                        <i class="fas fa-tag"></i>
-                        <span>KSh 85,000</span>
-                    </div>
-                    <p class="product-description">Unique geometric coffee table with glass top and solid wood base. A statement piece for any living room.</p>
-                    <div class="product-features">
-                        <span class="feature-tag">Tempered Glass</span>
-                        <span class="feature-tag">Solid Wood Base</span>
-                        <span class="feature-tag">Unique Design</span>
-                    </div>
-                    <a href="#contact" class="product-link">Inquire Now <i class="fas fa-arrow-right"></i></a>
-                </div>
-            </div>
-            
-            <!-- Product 6 -->
-            <div class="product-card-portfolio animate-on-scroll" data-category="decor">
-                <div class="product-media">
-                    <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1759467903/sofa4_iadvyh.jpg" alt="Decorative Lamp">
-                    <div class="product-tag">
-                        <i class="fas fa-tag"></i> Designer
-                    </div>
-                </div>
-                <div class="product-info">
-                    <div class="product-category">Home Decor</div>
-                    <h3 class="product-title">Designer Floor Lamp</h3>
-                    <div class="product-price">
-                        <i class="fas fa-tag"></i>
-                        <span>KSh 32,000</span>
-                    </div>
-                    <p class="product-description">Elegant floor lamp with adjustable brightness and warm lighting. Perfect for creating ambiance in any room.</p>
-                    <div class="product-features">
-                        <span class="feature-tag">Adjustable Brightness</span>
-                        <span class="feature-tag">Warm Lighting</span>
-                        <span class="feature-tag">Modern Design</span>
-                    </div>
-                    <a href="#contact" class="product-link">Inquire Now <i class="fas fa-arrow-right"></i></a>
-                </div>
+            <a class="prev">&#10094;</a>
+            <a class="next">&#10095;</a>
+            <div class="dots-container">
+                <span class="dot active" data-slide="0"></span>
+                <span class="dot" data-slide="1"></span>
+                <span class="dot" data-slide="2"></span>
+                <span class="dot" data-slide="3"></span>
+                <span class="dot" data-slide="4"></span>
             </div>
         </div>
     </div>
@@ -1495,17 +1971,17 @@
         <p class="section-subtitle animate-on-scroll">Explore the latest trends, tips, and ideas for creating your dream home.</p>
         <div class="blog-grid">
             <div class="blog-card animate-on-scroll">
-                <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1759467901/SOFA2_om87jm.jpg" alt="Living Room Trends">
+                <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1760256979/Sofa2_hr8no7.jpg" alt="Living Room Trends">
                 <h4>Top Living Room Trends for 2025</h4>
                 <p>Discover the latest design trends that are transforming living spaces this year.</p>
             </div>
             <div class="blog-card animate-on-scroll">
-                <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1759468322/dining_5_yej2hp.jpg" alt="Furniture Care">
+                <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1759468321/Dining_2_ewppvz.jpg" alt="Furniture Care">
                 <h4>How to Care for Your Wood Furniture</h4>
                 <p>Essential tips for maintaining the beauty and longevity of your wooden furniture pieces.</p>
             </div>
             <div class="blog-card animate-on-scroll">
-                <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1759467777/Bed3_rhxb9b.jpg" alt="Small Spaces">
+                <img src="https://res.cloudinary.com/dnxtuowlp/image/upload/v1760351800/decor2_b20oww.jpg" alt="Small Spaces">
                 <h4>Maximizing Small Spaces with Smart Furniture</h4>
                 <p>Creative solutions for making the most of compact living areas through strategic furniture choices.</p>
             </div>
@@ -1565,10 +2041,10 @@
             <h3>Lankah Home Furniture</h3>
             <p>Transforming houses into homes with premium furniture and exceptional design services. Your trusted partner for creating beautiful, functional living spaces.</p>
             <div class="social-links">
-                <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.facebook.com/lankah.home.furniture" class="social-link" target="_blank"><i class="fab fa-facebook-f"></i></a>
                 <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
-                <a href="#" class="social-link"><i class="fab fa-tiktok"></i></a>
-                <a href="#" class="social-link"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://www.tiktok.com/@olakalytle?is_from_webapp=1&sender_device=pc" class="social-link" target="_blank"><i class="fab fa-tiktok"></i></a>
+                <a href="https://wa.me/254707962387" class="social-link" target="_blank"><i class="fab fa-whatsapp"></i></a>
             </div>
         </div>
         <div class="footer-section">
@@ -1576,7 +2052,7 @@
             <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#services">Collections</a></li>
-                <li><a href="#product-portfolio">Products</a></li>
+                <li><a href="#featured">Featured</a></li>
                 <li><a href="#testimonials">Testimonials</a></li>
                 <li><a href="#blog">Inspiration</a></li>
                 <li><a href="#contact">Contact</a></li>
@@ -1588,10 +2064,9 @@
                 <li><a href="#living-room">Living Room</a></li>
                 <li><a href="#bedroom">Bedroom</a></li>
                 <li><a href="#dining">Dining</a></li>
-                <li><a href="#office">Office</a></li>
-                <li><a href="#outdoor">Outdoor</a></li>
-                <li><a href="#decor">Home Decor</a></li>
-                <li><a href="#custom">Custom Pieces</a></li>
+                <li><a href="#TV STAND">TV STAND</a></li>
+                <li><a href="#Cabinet and Drawer">Cabinet and Drawer</a></li>
+                <li><a href="#Home Decor">Home Decor</a></li>
             </ul>
         </div>
         <div class="footer-section">
@@ -1607,6 +2082,48 @@
         &copy; 2025 Lankah Home Furniture. All Rights Reserved.
     </div>
 </footer>
+
+<!-- Floating WhatsApp -->
+<div class="floating-whatsapp">
+    <a href="https://wa.me/254707962387" target="_blank" class="whatsapp-float">
+        <i class="fab fa-whatsapp"></i>
+        <span>Chat with us</span>
+    </a>
+</div>
+
+<!-- Chat Bot -->
+<div class="chat-bot">
+    <button class="chat-toggle">
+        <i class="fas fa-comments"></i>
+    </button>
+    <div class="chat-window">
+        <div class="chat-header">
+            <h3>Lankah Furniture Assistant</h3>
+            <button class="close-chat">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="chat-messages">
+            <div class="message bot-message">
+                Hello! I'm your Lankah furniture assistant. How can I help you today?
+            </div>
+        </div>
+        <div class="quick-options">
+            <div class="quick-option" data-category="living-room">Living Room</div>
+            <div class="quick-option" data-category="bedroom">Bedroom</div>
+            <div class="quick-option" data-category="dining">Dining</div>
+            <div class="quick-option" data-category="tv-stand">TV Stands</div>
+            <div class="quick-option" data-category="custom">Custom Furniture</div>
+            <div class="quick-option" data-category="pricing">Pricing</div>
+        </div>
+        <div class="chat-input">
+            <input type="text" placeholder="Type your message...">
+            <button class="send-btn">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+    </div>
+</div>
 
 <script>
     // Mobile Menu Toggle
@@ -1747,48 +2264,169 @@
         });
     });
 
-    // Form submission handling
+    // Form submission handling with loading state
     const contactForm = document.querySelector('.contact-form');
     if (contactForm) {
         contactForm.addEventListener('submit', function(e) {
             e.preventDefault();
-            alert('Thank you for your message! We will get back to you soon.');
-            this.reset();
+            const submitBtn = this.querySelector('.submit-btn');
+            const originalText = submitBtn.innerHTML;
+            
+            // Show loading state
+            submitBtn.innerHTML = '<div class="loading-spinner"></div> Processing...';
+            submitBtn.disabled = true;
+            
+            // Simulate form submission
+            setTimeout(() => {
+                submitBtn.innerHTML = originalText;
+                submitBtn.disabled = false;
+                alert('Thank you! Your message has been sent successfully. We will get back to you soon.');
+                this.reset();
+            }, 2000);
         });
     }
 
-    // Product Portfolio Functionality
-    document.addEventListener('DOMContentLoaded', function() {
-        // Filter functionality
-        const filterButtons = document.querySelectorAll('.filter-btn');
-        const productCards = document.querySelectorAll('.product-card-portfolio');
+    // Image lazy loading
+    function lazyLoadImages() {
+        const images = document.querySelectorAll('img[data-src]');
         
-        filterButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                // Remove active class from all buttons
-                filterButtons.forEach(btn => btn.classList.remove('active'));
-                // Add active class to clicked button
-                button.classList.add('active');
-                
-                const filterValue = button.getAttribute('data-filter');
-                
-                productCards.forEach(card => {
-                    if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
-                        card.style.display = 'block';
-                        setTimeout(() => {
-                            card.style.opacity = '1';
-                            card.style.transform = 'translateY(0)';
-                        }, 100);
-                    } else {
-                        card.style.opacity = '0';
-                        card.style.transform = 'translateY(20px)';
-                        setTimeout(() => {
-                            card.style.display = 'none';
-                        }, 300);
-                    }
-                });
+        const imageObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const img = entry.target;
+                    img.src = img.dataset.src;
+                    img.classList.add('loaded');
+                    imageObserver.unobserve(img);
+                }
             });
         });
+
+        images.forEach(img => imageObserver.observe(img));
+    }
+
+    // Add to cart functionality
+    function initAddToCart() {
+        const addToCartBtns = document.querySelectorAll('.add-to-cart');
+        
+        addToCartBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                const productName = this.closest('.featured-info').querySelector('h3').textContent;
+                const message = `Hello! I'm interested in: ${productName}. Please provide more details.`;
+                window.open(`https://wa.me/254707962387?text=${encodeURIComponent(message)}`, '_blank');
+            });
+        });
+    }
+
+    // Enhanced chat bot functionality
+    const chatToggle = document.querySelector('.chat-toggle');
+    const chatWindow = document.querySelector('.chat-window');
+    const closeChat = document.querySelector('.close-chat');
+    const sendBtn = document.querySelector('.send-btn');
+    const chatInput = document.querySelector('.chat-input input');
+    const chatMessages = document.querySelector('.chat-messages');
+    const quickOptions = document.querySelectorAll('.quick-option');
+
+    // Toggle chat window
+    chatToggle.addEventListener('click', () => {
+        chatWindow.classList.toggle('active');
+    });
+
+    // Close chat window
+    closeChat.addEventListener('click', () => {
+        chatWindow.classList.remove('active');
+    });
+
+    // Send message function
+    function sendMessage() {
+        const message = chatInput.value.trim();
+        if (message) {
+            // Add user message
+            addMessage(message, 'user');
+            
+            // Clear input
+            chatInput.value = '';
+            
+            // Simulate bot response
+            setTimeout(() => {
+                const botResponse = generateBotResponse(message);
+                addMessage(botResponse, 'bot');
+            }, 1000);
+        }
+    }
+
+    // Send message on button click
+    sendBtn.addEventListener('click', sendMessage);
+
+    // Send message on Enter key
+    chatInput.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') {
+            sendMessage();
+        }
+    });
+
+    // Quick option selection
+    quickOptions.forEach(option => {
+        option.addEventListener('click', () => {
+            const optionText = option.textContent;
+            addMessage(optionText, 'user');
+            
+            setTimeout(() => {
+                const botResponse = generateBotResponse(optionText);
+                addMessage(botResponse, 'bot');
+            }, 1000);
+        });
+    });
+
+    // Add message to chat
+    function addMessage(text, sender) {
+        const messageDiv = document.createElement('div');
+        messageDiv.classList.add('message');
+        messageDiv.classList.add(sender === 'user' ? 'user-message' : 'bot-message');
+        messageDiv.textContent = text;
+        
+        chatMessages.appendChild(messageDiv);
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+    }
+
+    // Generate bot responses
+    function generateBotResponse(message) {
+        const lowerMessage = message.toLowerCase();
+        
+        // Product category responses
+        if (lowerMessage.includes('living room') || lowerMessage.includes('sofa')) {
+            return "Our living room collection features premium sofas, sectionals, and coffee tables. We have various styles from modern to traditional. Would you like to see our current promotions or schedule a viewing?";
+        } else if (lowerMessage.includes('bedroom')) {
+            return "We have beautiful bedroom sets including beds, wardrobes, and nightstands. Many options available in different wood finishes like oak, mahogany, and walnut. What size bed are you looking for?";
+        } else if (lowerMessage.includes('dining')) {
+            return "Our dining collection includes extendable tables, formal dining sets, and casual breakfast nooks. We can help you choose the perfect set for your space. What size dining area are you furnishing?";
+        } else if (lowerMessage.includes('tv stand') || lowerMessage.includes('tv')) {
+            return "We offer a variety of TV stands in different sizes and styles to complement your entertainment setup. Many include storage for media equipment. What size TV do you have?";
+        } else if (lowerMessage.includes('custom') || lowerMessage.includes('made to order')) {
+            return "We specialize in custom furniture! Our craftsmen can create pieces to your exact specifications, dimensions, and style preferences. Would you like to discuss your custom furniture needs?";
+        } else if (lowerMessage.includes('delivery')) {
+            return "We offer free delivery within Bungoma and affordable rates throughout Kenya. Delivery time is typically 3-7 days depending on your location and product availability.";
+        } else if (lowerMessage.includes('price') || lowerMessage.includes('cost') || lowerMessage.includes('pricing')) {
+            return "Our prices vary depending on the furniture type, materials, and customization options. For accurate pricing, please contact us directly at +254 707 962 387 or request a quote through our website.";
+        } else if (lowerMessage.includes('payment') || lowerMessage.includes('installment')) {
+            return "We offer flexible payment options including installment plans for larger orders. Would you like to speak with our sales team about payment options?";
+        } else if (lowerMessage.includes('warranty') || lowerMessage.includes('guarantee')) {
+            return "All our furniture comes with a 1-year warranty on craftsmanship. Premium materials have additional guarantees. We stand behind the quality of our products!";
+        } else {
+            return "Thank you for your interest in Lankah Furniture! For specific product inquiries, pricing, or to schedule a viewing, please contact us at +254 707 962 387 or visit our showroom in Bungoma.";
+        }
+    }
+
+    // Initialize all enhancements when DOM loads
+    document.addEventListener('DOMContentLoaded', function() {
+        lazyLoadImages();
+        initAddToCart();
+        
+        // Auto-open chat after 30 seconds
+        setTimeout(() => {
+            if (!document.querySelector('.chat-window.active')) {
+                document.querySelector('.chat-toggle').click();
+            }
+        }, 30000);
     });
 </script>
 </body>
